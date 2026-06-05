@@ -23,11 +23,11 @@ const WhoWeSupport = () => {
             className="size-full object-cover"
           />
         </div>
-        <div className="flex flex-col py-6 justify-center px-6  lg:px-16">
+        <div className="flex flex-col pt-8 pb-12 md:py-6 justify-center px-6 lg:px-16">
           <p className=" text-xs uppercase tracking-[0.22em] text-primary">
             02 — Who we support
           </p>
-          <h2 className="mt-5 text-[32px] md:text-5xl font-medium leading-tight tracking-tight">
+          <h2 className="mt-4 text-[32px] md:text-5xl font-medium leading-tight tracking-tight">
             Care designed for <br className="xs:hidden" /> every individual.
           </h2>
           <p className="mt-4 md:mt-6 max-w-lg text-base md:leading-relaxed text-foreground/70">

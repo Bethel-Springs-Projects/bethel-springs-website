@@ -31,7 +31,7 @@ const services = [
 
 const WhatWeDo = () => {
   return (
-    <section className="padding-x padding-y">
+    <section id="what-we-do" className="padding-x padding-y">
       <div className="">
         <div>
           <p className="text-xs text-primary tracking-[0.22em] uppercase">
@@ -40,7 +40,7 @@ const WhatWeDo = () => {
           <h2 className="mt-4 text-[32px] md:text-5xl font-medium leading-tight tracking-tight">
             Care that fits around <br className="xs:hidden" /> the person
           </h2>
-          <p className="mt-4 text-base md:leading-relaxed text-foreground/70">
+          <p className="mt-4 md:mt-3 text-base md:leading-relaxed text-foreground/70">
             A full range of supported living services delivered with patience,
             respect and consistency.
           </p>

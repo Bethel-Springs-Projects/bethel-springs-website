@@ -1,7 +1,7 @@
 "use client";
 
 import { bsLogo } from "@/assets/images";
-import { Menu, UserCircleIcon, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -11,25 +11,30 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
+import { Button } from "../ui/button";
 
 const homeLinks = [
   {
-    title: "About",
-    href: "/about",
+    title: "What we do",
+    href: "/what",
   },
   {
-    title: "Contact",
-    href: "/contact",
+    title: "Who we support",
+    href: "/who",
   },
   {
-    title: "Apply for Support",
-    href: "/apply",
+    title: "Why us",
+    href: "/how",
+  },
+  {
+    title: "About us",
+    href: "/about-us",
   },
 ];
 
 const Header = () => {
   return (
-    <header className="py-2 md:py-4 padding-x bg-white">
+    <header className="py-2 md:py-4 padding-x">
       <div className="container flex items-center justify-between">
         <Link href="/" className="relative w-16 md:w-19 h-10 md:h-12 shrink-0">
           <Image
@@ -41,22 +46,21 @@ const Header = () => {
         </Link>
 
         <nav className="max-md:hidden">
-          <ul className="flex gap-3 lg:gap-4">
+          <ul className="flex gap-5 lg:gap-7">
             {homeLinks.map((link, idx) => (
-              <>
-                <li
-                  key={idx}
-                  className="text-sm leading-5 flex items-center gap-1.5 hover:text-primary duration-200"
-                >
-                  <Link href={link.href}>{link.title}</Link>
-                </li>
-                {homeLinks.length - 1 !== idx && (
-                  <div className=" w-px bg-black" />
-                )}
-              </>
+              <li
+                key={idx}
+                className="text-sm leading-5 hover:text-primary duration-200"
+              >
+                <Link href={link.href}>{link.title}</Link>
+              </li>
             ))}
           </ul>
         </nav>
+
+        <Button className="max-md:hidden text-sm h-[38px] px-3 rounded-full ">
+          Get Support
+        </Button>
 
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
@@ -77,7 +81,7 @@ const Header = () => {
                 className="text-sm leading-5 hover:bg-primary/5!"
               >
                 <Link href={link.href} className="hover:text-primary!">
-                  {homeLinks.length - 1 !== idx ? link.title : "Apply"}
+                  {idx === 1 ? "We support" : link.title}
                 </Link>
               </DropdownMenuItem>
             ))}

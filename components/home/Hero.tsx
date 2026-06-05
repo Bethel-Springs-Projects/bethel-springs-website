@@ -19,12 +19,12 @@ const Hero = () => {
           </p>
 
           <div className="mt-6 flex gap-4 ">
-            <Button className=" py-5 px-3 md:px-6 rounded-full ">
+            <Button className="h-[41px] md:h-[45px] px-3 md:px-6 rounded-full ">
               Get Support
             </Button>
             <Button
               variant="outline"
-              className="text- py-5 px-3 md:px-6 border-primary text-primary hover:text-primary hover:bg-primary/5 rounded-full"
+              className="h-[41px] md:h-[45px] px-3 md:px-6 border-primary text-primary hover:text-primary hover:bg-primary/5 rounded-full"
             >
               Contact Us
             </Button>

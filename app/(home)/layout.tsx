@@ -8,7 +8,7 @@ export default function HomeLayout({
   return (
     <>
       <Header />
-      <main className="text-txt-black">{children}</main>
+      <main className="text-txt">{children}</main>
     </>
   );
 }

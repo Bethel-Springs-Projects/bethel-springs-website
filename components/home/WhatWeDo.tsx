@@ -1,12 +1,18 @@
+"use client";
+
 import { nursePatient } from "@/assets/images";
 import { Compass, HeartHandshake, House, ShieldCheck } from "lucide-react";
 import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
 const services = [
   {
     title: "Supported Living Accommodation",
     description:
-      "Dedicated support delivered in the individual’s own home, assisting with everyday living tasks to promote independence, wellbeing, and quality of life.",
+      "Dedicated support delivered in the individual’s own home, assisting with everyday living tasks and wellbeing",
     icon: House,
   },
   {
@@ -31,7 +37,7 @@ const services = [
 
 const WhatWeDo = () => {
   return (
-    <section id="what-we-do" className="padding-x padding-y">
+    <section id="what" className="padding-x padding-y">
       <div className="">
         <div>
           <p className="text-xs text-primary tracking-[0.22em] uppercase">
@@ -47,7 +53,7 @@ const WhatWeDo = () => {
         </div>
 
         {/* Services for large screens */}
-        <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="max-md:hidden mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
           <div className="grid grid-rows-2 gap-4">
             {services.slice(0, 2).map((service, idx) => (
               <div
@@ -96,24 +102,52 @@ const WhatWeDo = () => {
         </div>
 
         {/* Services for small/medium screens */}
-        {/* <div className="lg:hidden mt-8 grid md:grid-cols-2 gap-4 ">
+        <Swiper
+          modules={[Navigation, Autoplay, Pagination]}
+          spaceBetween={16}
+          slidesPerView={1}
+          loop={true}
+          speed={600}
+          autoplay={{
+            delay: 3000,
+            pauseOnMouseEnter: true,
+          }}
+          pagination={{
+            clickable: true, // makes dots clickable
+            dynamicBullets: false, // optional: set true for smaller dots that expand
+          }}
+          breakpoints={{
+            640: {
+              slidesPerView: 2,
+            },
+            768: {
+              slidesPerView: 3,
+            },
+            1024: {
+              slidesPerView: 4,
+            },
+          }}
+          className="md:hidden! mt-8 flex flex-col pb-10! "
+        >
           {services.map((service, idx) => (
-            <div
-              key={idx}
-              className="p-4 md:p-6 flex-1 rounded-[16px] bg-primary/10"
-            >
-              <div className="bg-primary w-fit rounded-xl p-3">
-                <service.icon className="size-6 text-white" />
+            <SwiperSlide key={idx}>
+              <div
+                key={idx}
+                className="h-52 p-4 md:p-6 rounded-[16px] bg-primary/10"
+              >
+                <div className="bg-primary w-fit rounded-xl p-3">
+                  <service.icon className="size-6 text-white" />
+                </div>
+                <h3 className="mt-4 md:mt-6 text-base md:text-lg font-satoshi font-semibold">
+                  {service.title}
+                </h3>
+                <p className="mt-2 text-txt-black/70 leading-5.5 ">
+                  {service.description}
+                </p>
               </div>
-              <h3 className="mt-4 md:mt-6 text-sm md:text-lg font-satoshi font-semibold">
-                {service.title}
-              </h3>
-              <p className="mt-1 md:mt-2 text-txt-black/70 leading-5.5 ">
-                {service.description}
-              </p>
-            </div>
+            </SwiperSlide>
           ))}
-        </div> */}
+        </Swiper>
       </div>
     </section>
   );

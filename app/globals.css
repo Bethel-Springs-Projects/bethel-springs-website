@@ -132,6 +132,7 @@
 
   html {
     @apply font-inter;
+    scroll-behavior: smooth;
     font-synthesis: none;
   }
 
@@ -168,4 +169,16 @@
   .container {
     @apply w-full max-w-[1440px] mx-auto
   }
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--muted-foreground) !important;
+  /* inactive dot color (Tailwind gray-400) */
+
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--primary) !important;
+  /* e.g., #f97316 for orange */
+  opacity: 1;
 }

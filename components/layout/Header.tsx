@@ -4,7 +4,6 @@ import { bsLogo } from "@/assets/images";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -16,19 +15,19 @@ import { Button } from "../ui/button";
 const homeLinks = [
   {
     title: "What we do",
-    href: "/what",
+    href: "#what",
   },
   {
     title: "Who we support",
-    href: "/who",
+    href: "#who",
   },
   {
     title: "Why us",
-    href: "/how",
+    href: "#how",
   },
   {
     title: "About us",
-    href: "/about-us",
+    href: "#",
   },
 ];
 
@@ -39,7 +38,7 @@ const Header = () => {
         <Link href="/" className="relative w-16 md:w-19 h-10 md:h-12 shrink-0">
           <Image
             src={bsLogo.src}
-            alt="Cargoland Logo"
+            alt="bethel springs logo"
             className="size-full object-contain"
             fill
           />
@@ -52,7 +51,7 @@ const Header = () => {
                 key={idx}
                 className="text-sm leading-5 hover:text-primary duration-200"
               >
-                <Link href={link.href}>{link.title}</Link>
+                <a href={link.href}>{link.title}</a>
               </li>
             ))}
           </ul>

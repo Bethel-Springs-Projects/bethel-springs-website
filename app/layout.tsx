@@ -15,7 +15,6 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-
 export const metadata: Metadata = {
   title: "Bethel Springs | Supported Living & Care Services",
   description:
@@ -37,11 +36,11 @@ export const metadata: Metadata = {
       "Person-centred supported living and care services for adults with additional needs across the UK.",
     type: "website",
     locale: "en_GB",
-    url: "https://your-domain.com",
+    url: "https://bethelspringsgroup.com",
     siteName: "Bethel Springs",
     images: [
       {
-        url: "https://your-domain.com/og-image.jpg",
+        url: "https://bethelspringsgroup.com/og-image.png",
         width: 1200,
         height: 630,
         alt: "Supported Living Care Services",
@@ -51,10 +50,10 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Supported Living & Care Services | [Company Name]",
+    title: "Bethel SPrings | Supported Living & Care Services ",
     description:
       "Professional care and supported living services across the UK.",
-    images: ["https://your-domain.com/og-image.jpg"],
+    images: ["https://bethelspringsgroup.com/og-image.jpg"],
   },
 
   robots: {

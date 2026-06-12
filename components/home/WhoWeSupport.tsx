@@ -13,7 +13,7 @@ const WhoWeSupport = () => {
   return (
     <section id="who" className="border-b border-border/60">
       <div className="mx-auto grid max-w-[1400px] gap-0 md:grid-cols-2">
-        <div className="relative max-h-120 md:max-h-screen w-full overflow-hidden bg-muted lg:aspect-auto">
+        <div className="relative md:min-h-screen max-h-120 md:max-h-167.5 w-full overflow-hidden bg-muted lg:aspect-auto">
           <Image
             src={nursePatient}
             alt="A carer helping an adult prepare food together in a warm sunlit kitchen"
@@ -27,7 +27,7 @@ const WhoWeSupport = () => {
           <p className=" text-xs uppercase tracking-[0.22em] text-primary">
             02 — Who we support
           </p>
-          <h2 className="mt-4 text-[32px] md:text-5xl font-medium leading-tight tracking-tight">
+          <h2 className="mt-3 md:mt-4 text-[32px] md:text-5xl font-medium leading-tight tracking-tight">
             Care designed for <br className="xs:hidden" /> every individual.
           </h2>
           <p className="mt-4 md:mt-6 max-w-lg text-base md:leading-relaxed text-foreground/70">

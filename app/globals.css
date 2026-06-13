@@ -169,6 +169,15 @@
   .container {
     @apply w-full max-w-[1440px] mx-auto
   }
+
+  .brand-gradient {
+    background: linear-gradient(-40deg,
+        #72d4cd 10%,
+        #BBDDD2 73%,
+        #ffffff 130%);
+  }
+
+
 }
 
 .swiper-pagination-bullet {

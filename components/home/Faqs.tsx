@@ -1,0 +1,89 @@
+import React from "react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../ui/accordion";
+
+export const faqs = [
+  {
+    question: "Who do your services support?",
+    answer:
+      "We support adults with autism, learning disabilities, and additional support needs who require help with daily living and independence.",
+  },
+  {
+    question: "What is supported living?",
+    answer:
+      "Supported living means individuals live in their own accommodation while receiving tailored support from trained staff to help with daily tasks, safety, and independence.",
+  },
+  {
+    question: "Do you provide accommodation?",
+    answer:
+      "We don’t directly provide accommodation. We support individuals within their existing home or accommodation setting with structured care and assistance.",
+  },
+  {
+    question: "Can support be provided overnight or full-time?",
+    answer:
+      "Yes. Support can be arranged based on individual needs, including daytime support, overnight care, or 24-hour assistance where required.",
+  },
+  {
+    question: "How do I apply for support?",
+    answer:
+      "You can download the application form from the register page, complete it, and send it back via email. Our team will review and respond with next steps.",
+  },
+  {
+    question: "Is support tailored to each person?",
+    answer:
+      "Yes. All support plans are built around the individual’s needs, routines, and goals to promote independence and stability.",
+  },
+  {
+    question: "Who provides the support?",
+    answer:
+      "Support is provided by trained carers and support workers experienced in assisting individuals with complex needs in daily life and community settings.",
+  },
+];
+
+const Faqs = () => {
+  return (
+    <section className="padding-x padding-y">
+      <div>
+        <p className="sub-title">
+          06 - Need Clarity?
+        </p>
+        <h2 className="title">
+          Frequently asked questions
+        </h2>
+        <p className="sec-intro">
+          Simple answers about how we work, what to expect, and how support is
+          arranged
+        </p>
+      </div>
+
+      <Accordion
+        type="single"
+        collapsible
+        className="mt-8 md:mt-10 max-w-[775px] mx-auto"
+      >
+        {faqs.map((faq, idx) => (
+          <>
+            <AccordionItem
+              value={faq.question}
+              className="border-b-0!"
+              key={idx}
+            >
+              <AccordionTrigger className="font-bold text-lg md:text-xl leading-8 p-0">
+                {faq.question}
+              </AccordionTrigger>
+              <AccordionContent className="text-base font-light leading-6 py-2 sm:pt-4">
+                {faq.answer}
+              </AccordionContent>
+            </AccordionItem>
+            <div
+              className={`${
+                idx !== faqs.length - 1 ? "" : "hidden"
+              } h-px w-full bg-neutral-300 my-2 md:my-4`}
+            />
+          </>
+        ))}
+      </Accordion>
+    </section>
+  );
+};
+
+export default Faqs;

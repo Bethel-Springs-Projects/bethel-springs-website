@@ -1,3 +1,4 @@
+import Faqs from "@/components/home/Faqs";
 import GetInTouch from "@/components/home/GetInTouch";
 import Hero from "@/components/home/Hero";
 import Testimonials from "@/components/home/Testimonials";
@@ -13,6 +14,7 @@ export default function HomePage() {
       <WhoWeSupport />
       <WhyChooseUs />
       <Testimonials />
+      <Faqs />
       <GetInTouch />
     </div>
   );

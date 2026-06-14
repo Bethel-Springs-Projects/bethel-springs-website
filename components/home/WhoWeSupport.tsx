@@ -23,18 +23,19 @@ const WhoWeSupport = () => {
             className="size-full object-cover"
           />
         </div>
-        <div className="flex flex-col pt-8 pb-12 md:py-6 justify-center px-6 lg:px-16">
-          <p className=" text-xs uppercase tracking-[0.22em] text-primary">
+
+        <div className="flex flex-col pt-10 md:pt-8 pb-12 md:py-6 justify-center px-6 lg:px-16">
+          <p className="sub-title md:text-start!">
             02 — Who we support
           </p>
-          <h2 className="mt-3 md:mt-4 text-[32px] md:text-5xl font-medium leading-tight tracking-tight">
-            Care designed for <br className="xs:hidden" /> every individual.
+          <h2 className="title md:text-start!">
+            Care designed for every individual.
           </h2>
-          <p className="mt-4 md:mt-6 max-w-lg text-base md:leading-relaxed text-foreground/70">
-            We work alongside adults across England, supporting people with a
+          <p className="sec-intro md:text-start!">
+            We work across England, supporting people with a
             wide range of needs and circumstances.
           </p>
-          <ul className="mt-6 md:mt-8 divide-y divide-border border-y border-border">
+          <ul className="mt-6 md:mt-8 max-md:grid sm:grid-cols-2 divide-y divide-border border-y border-border">
             {whoWeSupport.map((label) => (
               <li
                 key={label}

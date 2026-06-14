@@ -39,13 +39,13 @@ const WhatWeDo = () => {
   return (
     <section id="what" className="padding-x padding-y">
       <div>
-        <p className="text-xs text-primary tracking-[0.22em] uppercase">
-          01 - What We Do
+        <p className="sub-title">
+          What We Do
         </p>
-        <h2 className="mt-3 md:mt-4 text-[32px] md:text-5xl font-medium leading-tight tracking-tight">
+        <h2 className="title">
           Care that fits around <br className="xs:hidden" /> the person
         </h2>
-        <p className="mt-4 md:mt-3 text-base md:leading-relaxed text-foreground/70">
+        <p className="sec-intro">
           A full range of supported living services delivered with patience,
           respect and consistency.
         </p>
@@ -126,7 +126,7 @@ const WhatWeDo = () => {
             slidesPerView: 4,
           },
         }}
-        className="md:hidden! mt-8 flex flex-col pb-10! "
+        className="md:hidden! mt-6 flex flex-col pb-10! "
       >
         {services.map((service, idx) => (
           <SwiperSlide key={idx}>

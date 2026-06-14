@@ -79,13 +79,11 @@ const Testimonials = () => {
   return (
     <section className="padding-x padding-y">
       <div>
-        <p className="text-xs text-primary tracking-[0.22em] uppercase">
-          05 - Testimonials
-        </p>
-        <h2 className="mt-3 md:mt-4 text-[32px] md:text-5xl font-medium leading-tight tracking-tight">
-          What families say <br className="xs:hidden" /> about our care
+        <p className="sub-title">05 - Testimonials</p>
+        <h2 className="title">
+          What families say about <br className="xs:hidden" /> our care
         </h2>
-        <p className="mt-4 md:mt-3 text-base md:leading-relaxed text-foreground/70">
+        <p className="sec-intro">
           Real experiences from people who have trusted us to provide
           consistent, reliable support
         </p>
@@ -93,13 +91,13 @@ const Testimonials = () => {
 
       <div className="max-md:hidden mt-16 lg:mt-18 grid grid-cols-3 gap-4 lg:gap-5">
         {prev && (
-          <div className="relative h-full max-md:hidden p-4 group border border-primary/70 rounded-lg duration-300 ease-in-out hover:-translate-y-2 hover:shadow-md transition-all flex flex-col justify-between">
+          <div className="relative h-full max-md:hidden p-4 lg:p-6 group border border-primary/40 rounded-lg lg:rounded-xl duration-300 ease-in-out hover:-translate-y-2 hover:shadow-md transition-all flex flex-col justify-between">
             {/* blurred overlay */}
             <div className="absolute -inset-1 z-5  backdrop-blur-[2px] bg-white/40" />
 
             <p className="text-sm sm:text-base max-w-xs">{prev.text}</p>
 
-            <div className="flex gap-4 mt-2 sm:mt-4 items-center">
+            <div className="flex gap-4 mt-2 sm:mt-4 md:mt-6 items-center">
               <div className="w-12 sm:w-14 sm:h-14 h-12 rounded-full overflow-hidden ">
                 <Image
                   src={prev.image}
@@ -144,13 +142,13 @@ const Testimonials = () => {
                 animate="animate"
                 exit="exit"
                 transition={{ duration: 0.25, ease: "easeOut" }}
-                className="relative -top-8 lg:-top-10 h-full p-4 lg:p-6 group border border-primary/70 rounded-lg hover:-translate-y-2 hover:shadow-md transition-all flex flex-col justify-between"
+                className="relative -top-8 lg:-top-10 h-full p-4 lg:p-6 group border border-primary/40 rounded-lg lg:rounded-xl hover:-translate-y-2 hover:shadow-md transition-all flex flex-col justify-between"
               >
                 {/* background gradient */}
-                <div className="absolute hidden transition-colors duration-200 group-hover:block inset-0 -z-10 rounded-lg brand-gradient opacity-10" />
+                <div className="absolute  transition-colors duration-200 inset-0 -z-10 rounded-lg brand-gradient opacity-10" />
 
                 <p className="text-sm sm:text-base max-w-xs">{current.text}</p>
-                <div className="flex gap-4 mt-2 sm:mt-4 items-center">
+                <div className="flex gap-4 mt-2 sm:mt-4 md:mt-6 items-center">
                   <div className="w-12 sm:w-14 sm:h-14 h-12 rounded-full overflow-hidden ">
                     <Image
                       src={current.image}
@@ -171,13 +169,13 @@ const Testimonials = () => {
         </div>
 
         {next && (
-          <div className="max-md:hidden p-4 h-full group border border-primary/70 rounded-lg duration-300 ease-in-out hover:-translate-y-2 hover:shadow-md transition-all flex relative flex-col justify-between">
+          <div className="max-md:hidden p-4 g:p-6 h-full group border border-primary/40 rounded-lg lg:rounded-xl duration-300 ease-in-out hover:-translate-y-2 hover:shadow-md transition-all flex relative flex-col justify-between">
             {/* blurred overlay */}
             <div className="absolute -inset-1 z-5  backdrop-blur-[2px] bg-white/40" />
 
             <p className="text-sm sm:text-base max-w-xs">{next.text}</p>
 
-            <div className="flex gap-4 mt-2 sm:mt-4 items-center">
+            <div className="flex gap-4 mt-2 sm:mt-4 md:mt-6 items-center">
               <div className="w-12 sm:w-14 sm:h-14 h-12 rounded-full overflow-hidden ">
                 <Image
                   src={next.image}
@@ -243,7 +241,7 @@ const Testimonials = () => {
       >
         {testimonials.map((testimonial, idx) => (
           <SwiperSlide key={idx}>
-            <div className="flex-1 mt-8 p-4 max-sm:h-[184px] h-[224px] flex flex-col justify-between group border border-primary/70 rounded-lg duration-300 ease-in-out hover:-translate-y-1 hover:shadow-md transition-all relative ">
+            <div className="flex-1 mt-8 p-4 max-sm:h-[165px] h-[224px] flex flex-col justify-between group border border-primary/40 rounded-lg duration-300 ease-in-out hover:-translate-y-1 hover:shadow-md transition-all relative ">
               {/* background gradient */}
               <div className="absolute hidden transition-colors duration-200 group-hover:block inset-0 -z-10 rounded-lg brand-gradient opacity-10" />
 

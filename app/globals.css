@@ -6,6 +6,7 @@
 
 @theme inline {
   --breakpoint-xs: 26.5625rem;
+  --breakpoint-xxs: 375px;
   --color-txt-black: var(--text-black);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -159,7 +160,7 @@
 
 @layer utilities {
   .padding-x {
-    @apply px-6 sm:px-14 lg:px-[100px]
+    @apply px-4 sm:px-14 lg:px-[100px]
   }
 
   .padding-y {
@@ -168,6 +169,18 @@
 
   .container {
     @apply w-full max-w-[1440px] mx-auto
+  }
+
+  .sub-title {
+    @apply text-xs text-primary text-center tracking-[0.22em] uppercase
+  }
+
+  .title {
+    @apply mt-3 md:mt-4 text-[28px] text-center md:text-[40px] font-medium leading-8.75 md:leading-[48px] tracking-tight
+  }
+
+  .sec-intro {
+    @apply mt-2 md:mt-3 text-center text-base font-light max-md:max-w-[537px] mx-auto
   }
 
   .brand-gradient {

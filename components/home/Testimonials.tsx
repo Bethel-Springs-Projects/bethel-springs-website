@@ -81,7 +81,7 @@ const Testimonials = () => {
       <div>
         <p className="sub-title">05 - Testimonials</p>
         <h2 className="title">
-          What families say about <br className="xs:hidden" /> our care
+          What families say about our care
         </h2>
         <p className="sec-intro">
           Real experiences from people who have trusted us to provide

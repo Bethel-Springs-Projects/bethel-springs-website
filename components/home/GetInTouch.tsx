@@ -22,7 +22,7 @@ const GetInTouch = () => {
               someone in your care, we&apos;re here to listen and help you take the
               next step.
             </p>
-            <div className="mt-6 md:mt-8 flex flex-wrap gap-3 max-md:justify-center">
+            <div className="mt-6 md:mt-8 flex flex-wrap gap-3">
               <a
                 href="mailto:hello@hearthcare.co.uk"
                 className="h-[41px] md:h-[45px] px-3 md:px-6 inline-flex items-center gap-2 rounded-full bg-primary  text-sm font-medium text-primary-foreground transition-colors hover:bg-secondary"

@@ -58,7 +58,7 @@ const Faqs = () => {
       <Accordion
         type="single"
         collapsible
-        className="mt-8 md:mt-10 max-w-[775px] mx-auto"
+        className="mt-8 md:mt-10 max-w-[775px]"
       >
         {faqs.map((faq, idx) => (
           <>
@@ -77,7 +77,7 @@ const Faqs = () => {
             <div
               className={`${
                 idx !== faqs.length - 1 ? "" : "hidden"
-              } h-px w-full bg-neutral-300 my-2 md:my-4`}
+              } h-px w-full bg-neutral-300 my-3 md:my-4`}
             />
           </>
         ))}

@@ -43,7 +43,7 @@ const WhatWeDo = () => {
           What We Do
         </p>
         <h2 className="title">
-          Care that fits around <br className="xs:hidden" /> the person
+          Care that fits around the person
         </h2>
         <p className="sec-intro">
           A full range of supported living services delivered with patience,

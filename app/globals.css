@@ -172,15 +172,15 @@
   }
 
   .sub-title {
-    @apply text-xs text-primary text-center tracking-[0.22em] uppercase
+    @apply text-xs text-primary tracking-[0.22em] uppercase
   }
 
   .title {
-    @apply mt-3 md:mt-4 text-[28px] text-center md:text-[40px] font-medium leading-8.75 md:leading-[48px] tracking-tight
+    @apply mt-2 md:mt-4 text-[28px] md:text-[40px] font-medium leading-8.75 md:leading-[48px] tracking-tight
   }
 
   .sec-intro {
-    @apply mt-2 md:mt-3 text-center text-base font-light max-md:max-w-[537px] mx-auto
+    @apply mt-3 md:mt-3 text-base font-light max-md:max-w-[537px] mx-auto
   }
 
   .brand-gradient {

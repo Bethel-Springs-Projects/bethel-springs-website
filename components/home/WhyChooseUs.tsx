@@ -4,7 +4,7 @@ import Image from "next/image";
 import React from "react";
 
 const WhyChooseUs = () => {
-  const title = "Round-the-clock professional care";
+  const title = "Round the clock care";
   const paragraph =
     "You provide the home; we provide the dedicated professional care to ensure comfort, saftey, and well-being. Our live-in carers adapt completely to your personal routines, delivering reliable, round-the-clock support so you can remain exactly where you are most comfortable.";
 
@@ -21,9 +21,7 @@ const WhyChooseUs = () => {
     <section className="padding-x padding-y">
       <div>
         <p className="sub-title">05 - Why Choose Us</p>
-        <h2 className="title">
-          Care you can trust to <br className="xs:hidden" /> be there.
-        </h2>
+        <h2 className="title">Care you can trust to be there.</h2>
         {/* <p className="mt-4 md:mt-3 text-base md:leading-relaxed text-foreground/70">
           A full range of supported living services delivered with patience,
           respect and consistency.
@@ -32,7 +30,7 @@ const WhyChooseUs = () => {
 
       <div className="mt-6 px-4 md:px-6 flex gap-2 bg-primary/8 rounded-[16px] justify-between">
         <div className="flex-1 py-4 md:py-6 shrink">
-          <h3 className="text-2xl md:text-4xl max-md:text-center max-w-lg font-medium leading-tight tracking-tight">
+          <h3 className="text-2xl md:text-4xl max-w-lg font-medium leading-tight tracking-tight">
             {title}
           </h3>
           <p className="mt-4 md:mt-3 text-sm md:text-base max-w-lg max-md:leading-5.5">

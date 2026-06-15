@@ -18,7 +18,7 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="padding-x padding-y">
+    <section className="padding-x padding-y bg-white">
       <div>
         <p className="sub-title">05 - Why Choose Us</p>
         <h2 className="title">Care you can trust to be there.</h2>

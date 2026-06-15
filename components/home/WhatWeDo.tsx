@@ -37,7 +37,7 @@ const services = [
 
 const WhatWeDo = () => {
   return (
-    <section id="what" className="padding-x padding-y">
+    <section id="what" className="padding-x padding-y lg:pb-25!">
       <div>
         <p className="sub-title">
           What We Do

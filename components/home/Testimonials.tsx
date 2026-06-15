@@ -77,7 +77,7 @@ const Testimonials = () => {
   const currentVariants = slideVariants[direction];
 
   return (
-    <section className="padding-x padding-y ">
+    <section className="padding-x padding-y">
       <div>
         <p className="sub-title">05 - Testimonials</p>
         <h2 className="title">

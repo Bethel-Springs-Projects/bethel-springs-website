@@ -172,7 +172,7 @@
   }
 
   .sub-title {
-    @apply text-xs text-primary tracking-[0.22em] uppercase
+    @apply text-xs text-primary tracking-[0.22em] uppercase font-satoshi
   }
 
   .title {

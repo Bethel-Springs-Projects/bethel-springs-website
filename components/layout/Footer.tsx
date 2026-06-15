@@ -15,12 +15,12 @@ import { Facebook, Instagram, Youtube } from "../icons";
 
 const Footer = () => {
   return (
-    <footer className="bg-white border-t border-gray-200">
+    <footer className="border-t border-gray-200">
       <div className="padding-x pt-10 md:pt-12 pb-6">
         {/* 3-column grid: brand | contact | social */}
-        <div className="grid grid-cols-1 gap-4 max-md:gap-y-8 grid-cols-2 md:grid-cols-3 md:gap-12">
+        <div className="grid grid-cols-1 gap-8 grid-cols-2 md:grid-cols-3 md:gap-12">
           {/* Brand */}
-          <div className="">
+          <div className="max-sm:col-span-2">
             <Link
               href="/"
               className="relative block w-16 md:w-19 h-10 md:h-12 shrink-0"
@@ -32,15 +32,15 @@ const Footer = () => {
                 fill
               />
             </Link>
-            <p className="text-gray-500 text-sm mt-3 max-w-xs mx-auto md:mx-0">
-              Smart solutions for modern businesses. Built with clarity and
-              purpose.
+            <p className="text-gray-500 text-sm mt-3 max-w-xs md:mx-0">
+              We provide the best care. <br className="sm:hidden" /> Done
+              properly, with time and attention.
             </p>
           </div>
 
           {/* Contact – only essential info, no extra links */}
           <div>
-            <h3 className="text-xs font-semibold tracking-wider text-gray-400 uppercase mb-4">
+            <h3 className="text-sm font-semibold tracking-wider text-gray-400 uppercase mb-4">
               Contact
             </h3>
             <ul className="space-y-2 text-gray-600 text-sm">
@@ -59,7 +59,12 @@ const Footer = () => {
                 <div>
                   <Phone className="size-4 text-primary" />
                 </div>
-                <a href="tel:+447974369854" className="hover:text-primary transition">+44 7974 369 854</a>
+                <a
+                  href="tel:+447974369854"
+                  className="hover:text-primary transition"
+                >
+                  +44 7974 369 854
+                </a>
               </li>
               <li className="flex items-center gap-2">
                 <div>
@@ -72,7 +77,7 @@ const Footer = () => {
 
           {/* Social – only icons, no extra text links */}
           <div>
-            <h3 className="text-xs font-semibold tracking-wider text-gray-400 uppercase mb-4">
+            <h3 className="text-sm font-semibold tracking-wider text-gray-400 uppercase mb-4">
               Connect
             </h3>
             <div className="flex gap-5">

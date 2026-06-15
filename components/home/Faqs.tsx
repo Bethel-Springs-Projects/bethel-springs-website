@@ -1,5 +1,12 @@
 import React from "react";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../ui/accordion";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "../ui/accordion";
+import Image from "next/image";
+import { nursePatient } from "@/assets/images";
 
 export const faqs = [
   {
@@ -17,11 +24,11 @@ export const faqs = [
     answer:
       "We don’t directly provide accommodation. We support individuals within their existing home or accommodation setting with structured care and assistance.",
   },
-  {
-    question: "Can support be provided overnight or full-time?",
-    answer:
-      "Yes. Support can be arranged based on individual needs, including daytime support, overnight care, or 24-hour assistance where required.",
-  },
+//   {
+//     question: "Can support be provided overnight or full-time?",
+//     answer:
+//       "Yes. Support can be arranged based on individual needs, including daytime support, overnight care, or 24-hour assistance where required.",
+//   },
   {
     question: "How do I apply for support?",
     answer:
@@ -41,47 +48,57 @@ export const faqs = [
 
 const Faqs = () => {
   return (
-    <section className="padding-x padding-y">
-      <div>
-        <p className="sub-title">
-          06 - Need Clarity?
-        </p>
-        <h2 className="title">
-          Frequently asked questions
-        </h2>
-        <p className="sec-intro">
-          Simple answers about how we work, what to expect, and how support is
-          arranged
-        </p>
-      </div>
+    <section className=" bg-primary text-white">
+      <div className="grid md:grid-cols-2">
+        <div className="relative max-md:hidden md:min-h-screen md:max-h-[801px] lg:max-h-[770px] w-full overflow-hidden bg-muted lg:aspect-auto">
+          <Image
+            src={nursePatient}
+            alt="A carer helping an adult prepare food together in a warm sunlit kitchen"
+            width={1600}
+            height={1280}
+            loading="lazy"
+            className="size-full object-cover"
+          />
+        </div>
+        <div className="flex flex-col justify-center px-6 lg:px-16 md:pt-8 py-16 md:py-6 ">
+          <div>
+            <p className="sub-title text-white!">06 - Need Clarity?</p>
+            <h2 className="title">Frequently asked questions</h2>
+            <p className="sec-intro">
+              Simple answers about how we work, what to expect, and how support
+              is arranged
+            </p>
+          </div>
 
-      <Accordion
-        type="single"
-        collapsible
-        className="mt-8 md:mt-10 max-w-[775px]"
-      >
-        {faqs.map((faq, idx) => (
-          <>
-            <AccordionItem
-              value={faq.question}
-              className="border-b-0!"
-              key={idx}
-            >
-              <AccordionTrigger className="font-bold text-lg md:text-xl leading-8 p-0">
-                {faq.question}
-              </AccordionTrigger>
-              <AccordionContent className="text-base font-light leading-6 py-2 sm:pt-4">
-                {faq.answer}
-              </AccordionContent>
-            </AccordionItem>
-            <div
-              className={`${
-                idx !== faqs.length - 1 ? "" : "hidden"
-              } h-px w-full bg-neutral-300 my-3 md:my-4`}
-            />
-          </>
-        ))}
-      </Accordion>
+          <Accordion
+            type="single"
+            collapsible
+            className="mt-8 md:mt-10 max-w-[775px]"
+          >
+            {faqs.map((faq, idx) => (
+              <>
+                <AccordionItem
+                  value={faq.question}
+                  className="border-b-0!"
+                  key={idx}
+                >
+                  <AccordionTrigger className="font-bold text-lg md:text-xl leading-8 p-0 [&>svg]:text-white!">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-base font-light leading-6 py-2 sm:pt-4">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+                <div
+                  className={`${
+                    idx !== faqs.length - 1 ? "" : "hidden"
+                  } h-px w-full bg-neutral-300 my-3 md:my-4`}
+                />
+              </>
+            ))}
+          </Accordion>
+        </div>
+      </div>
     </section>
   );
 };

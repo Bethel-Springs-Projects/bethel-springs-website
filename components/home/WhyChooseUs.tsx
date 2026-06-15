@@ -28,8 +28,8 @@ const WhyChooseUs = () => {
         </p> */}
       </div>
 
-      <div className="mt-6 px-4 md:px-6 flex gap-2 bg-primary/8 rounded-[16px] justify-between">
-        <div className="flex-1 py-4 md:py-6 shrink">
+      <div className="mt-6 px-4 md:px-6 flex gap-2 bg-primary/3 rounded-[16px] justify-between">
+        <div className="flex-1 py-4 md:py-6 shrink-0">
           <h3 className="text-2xl md:text-4xl max-w-lg font-medium leading-tight tracking-tight">
             {title}
           </h3>
@@ -37,11 +37,11 @@ const WhyChooseUs = () => {
             {paragraph}
           </p>
 
-          <div className="mt-4 md:mt-6 grid md:grid-cols-2 gap-y-4 md:gap-y-6 max-w-lg">
+          <div className="mt-4 md:mt-6 grid sm:grid-cols-2 gap-y-4 md:gap-y-6 max-w-lg">
             {points.map((point, idx) => (
               <ul key={idx} className="">
                 <li className="flex items-center gap-2">
-                  <div className="size-6 flex items-center justify-center bg-primary rounded-full">
+                  <div className="shrink-0 size-6 flex items-center justify-center bg-primary/30 rounded-full">
                     <CheckCircle className="size-3.5 text-white" />
                   </div>
                   {point}
@@ -51,11 +51,11 @@ const WhyChooseUs = () => {
           </div>
         </div>
 
-        <div className="max-lg:hidden shrink-0 h-full self-end">
+        <div className="max-md:hidden flex justify-end items-end">
           <Image
             src={nurseIllustration}
             alt="nurse illustration"
-            className="min-w-[340px] max-w-[376px]  w-fit object-contain"
+            className="max-w-[376px] max-lg:w-[320px] object-contain"
           />
         </div>
       </div>

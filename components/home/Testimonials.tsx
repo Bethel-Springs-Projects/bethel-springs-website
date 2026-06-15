@@ -221,7 +221,7 @@ const Testimonials = () => {
         modules={[Navigation, Autoplay, Pagination]}
         // onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
         spaceBetween={16}
-        slidesPerView={1.3}
+        slidesPerView={1.2}
         loop={true}
         speed={600}
         autoplay={{
@@ -241,15 +241,15 @@ const Testimonials = () => {
       >
         {testimonials.map((testimonial, idx) => (
           <SwiperSlide key={idx}>
-            <div className="flex-1 mt-8 p-4 max-sm:h-[165px] h-[224px] flex flex-col justify-between group border border-primary/40 rounded-lg duration-300 ease-in-out hover:-translate-y-1 hover:shadow-md transition-all relative ">
+            <div className="flex-1 mt-8 p-4 max-sm:max-h-[174px] h-[224px] flex flex-col justify-between group border border-primary/40 rounded-lg duration-300 ease-in-out hover:-translate-y-1 hover:shadow-md transition-all relative ">
               {/* background gradient */}
               <div className="absolute hidden transition-colors duration-200 group-hover:block inset-0 -z-10 rounded-lg brand-gradient opacity-10" />
 
-              <p className="text-sm sm:text-base max-w-xs">
+              <p className="flex-1 text-sm sm:text-base max-w-xs">
                 {testimonial.text}
               </p>
 
-              <div className="flex gap-4 mt-2 sm:mt-4 items-center">
+              <div className="flex gap-4 mt-4 items-center">
                 <div className="w-12 sm:w-14 sm:h-14 h-12 rounded-full overflow-hidden ">
                   <Image
                     src={testimonial.image}

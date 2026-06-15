@@ -12,7 +12,7 @@ const whoWeSupport = [
 const WhoWeSupport = () => {
   return (
     <section id="who" className="border-b border-border/60">
-      <div className="mx-auto grid max-w-[1400px] gap-0 md:grid-cols-2">
+      <div className="mx-auto grid max-w-[1400px] md:grid-cols-2">
         <div className="relative md:min-h-screen max-h-120 md:max-h-167.5 w-full overflow-hidden bg-muted lg:aspect-auto">
           <Image
             src={nursePatient}
@@ -25,17 +25,17 @@ const WhoWeSupport = () => {
         </div>
 
         <div className="flex flex-col pt-10 md:pt-8 pb-12 md:py-6 justify-center px-6 lg:px-16">
-          <p className="sub-title md:text-start!">
+          <p className="sub-title">
             02 — Who we support
           </p>
-          <h2 className="title md:text-start!">
+          <h2 className="title">
             Care designed for every individual.
           </h2>
-          <p className="sec-intro md:text-start!">
+          <p className="sec-intro">
             We work across England, supporting people with a
             wide range of needs and circumstances.
           </p>
-          <ul className="mt-6 md:mt-8 max-md:grid sm:grid-cols-2 divide-y divide-border border-y border-border">
+          <ul className="mt-6 md:mt-8 max-md:grid divide-y divide-border border-y border-border">
             {whoWeSupport.map((label) => (
               <li
                 key={label}

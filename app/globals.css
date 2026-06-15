@@ -4,7 +4,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@theme inline {
+@theme inline { 
   --breakpoint-xs: 26.5625rem;
   --breakpoint-xxs: 375px;
   --color-txt-black: var(--text-black);
@@ -180,7 +180,7 @@
   }
 
   .sec-intro {
-    @apply mt-3 md:mt-3 text-base font-light max-md:max-w-[537px] mx-auto
+    @apply mt-3 md:mt-3 text-base font-light max-md:max-w-[537px]
   }
 
   .brand-gradient {

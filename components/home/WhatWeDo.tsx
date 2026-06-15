@@ -132,7 +132,7 @@ const WhatWeDo = () => {
           <SwiperSlide key={idx}>
             <div
               key={idx}
-              className="h-52 p-4 md:p-6 rounded-[16px] bg-primary/10"
+              className="h-52 p-4 md:p-6 rounded-[16px] bg-primary/8"
             >
               <div className="bg-primary w-fit rounded-xl p-3">
                 <service.icon className="size-6 text-white" />

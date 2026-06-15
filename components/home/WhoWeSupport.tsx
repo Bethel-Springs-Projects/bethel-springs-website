@@ -11,7 +11,7 @@ const whoWeSupport = [
 
 const WhoWeSupport = () => {
   return (
-    <section id="who" className="border-b border-border/60">
+    <section id="who" className="border-b border-border/60 bg-white">
       <div className="mx-auto grid max-w-[1400px] md:grid-cols-2">
         <div className="relative md:min-h-screen max-h-120 md:max-h-167.5 w-full overflow-hidden bg-muted lg:aspect-auto">
           <Image

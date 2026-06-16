@@ -1,6 +1,5 @@
 import { nursePatient } from "@/assets/images";
 import Image from "next/image";
-import React from "react";
 
 const whoWeSupport = [
   "Adults aged 18 and over",

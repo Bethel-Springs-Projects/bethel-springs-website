@@ -1,8 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import { Button } from "../ui/button";
 import { bsIllustration } from "@/assets/images";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const Hero = () => {
+  const router = useRouter();
+
   return (
     <section className="padding-x padding-y md:h-[calc(100vh-80px)]">
       <div className="flex max-md:flex-col h-full justify-between">
@@ -22,15 +28,19 @@ const Hero = () => {
           </p>
 
           <div className="mt-6 flex gap-4 ">
-            <Button className="h-[41px] md:h-[45px] px-3 md:px-6 rounded-full ">
+            <Link
+              href="/apply"
+              className="flex items-center h-[41px] md:h-[45px] px-3.25 md:px-6 text-white bg-primary hover:bg-primary/90 rounded-full "
+            >
               Get Support
-            </Button>
-            <Button
-              variant="outline"
-              className="h-[41px] md:h-[45px] px-3 md:px-6 border-primary text-primary hover:text-primary hover:bg-primary/5 rounded-full"
+            </Link>
+
+            <Link
+              href="/#contact"
+              className="flex items-center h-[41px] md:h-[45px] px-3.25 md:px-6.25 border border-primary text-primary hover:text-primary hover:bg-primary/5 rounded-full"
             >
               Contact Us
-            </Button>
+            </Link>
           </div>
         </div>
 

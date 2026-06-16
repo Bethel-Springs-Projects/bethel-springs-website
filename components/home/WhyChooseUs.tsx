@@ -1,7 +1,6 @@
 import { nurseIllustration } from "@/assets/images";
 import { CheckCircle } from "lucide-react";
 import Image from "next/image";
-import React from "react";
 
 const WhyChooseUs = () => {
   const title = "Round the clock care";

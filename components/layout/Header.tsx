@@ -10,24 +10,24 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
-import { Button } from "../ui/button";
 
 const homeLinks = [
   {
+    title: "About us",
+    href: "#",
+  },
+  {
     title: "What we do",
-    href: "#what",
+    href: "/#what",
   },
   {
     title: "Who we support",
-    href: "#who",
+    href: "/#who",
   },
+
   {
-    title: "Why us",
-    href: "#how",
-  },
-  {
-    title: "About us",
-    href: "#",
+    title: "Apply",
+    href: "/apply",
   },
 ];
 
@@ -57,9 +57,9 @@ const Header = () => {
           </ul>
         </nav>
 
-        <Button className="max-md:hidden text-sm h-[38px] px-3 rounded-full ">
-          Get Support
-        </Button>
+        <Link href="/#contact" className="max-md:hidden flex items-center text-sm h-[38px] px-3.25 rounded-full hover:bg-primary/90 bg-primary text-white">
+          Contact Us
+        </Link>
 
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
@@ -71,7 +71,7 @@ const Header = () => {
           <DropdownMenuContent
             onCloseAutoFocus={(e) => e.preventDefault()}
             align="end"
-            className="p-2 md:hidden"
+            className="p-2 md:hidden w-34.5"
           >
             {homeLinks.map((link, idx) => (
               <DropdownMenuItem
@@ -80,7 +80,7 @@ const Header = () => {
                 className="text-sm leading-5 hover:bg-primary/5!"
               >
                 <Link href={link.href} className="hover:text-primary!">
-                  {idx === 1 ? "We support" : link.title}
+                  { link.title}
                 </Link>
               </DropdownMenuItem>
             ))}

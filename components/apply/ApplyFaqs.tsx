@@ -41,20 +41,20 @@ const ApplyFaqs = () => {
 
           <div className="mt-4 md:mt-8 space-y-3">
             <a
-              href="tel:+440000000000"
-              className="flex items-center gap-3 rounded-2xl border border-border/70 bg-background px-5 py-4 text-sm transition-colors hover:border-primary/40"
+              href="tel:+447974369854"
+              className="flex items-center gap-3 rounded-2xl border border-border/70 bg-white px-5 py-4 text-sm transition-colors hover:border-primary/40"
             >
               <Phone className="h-4 w-4 text-primary" />
               <span className="font-medium text-foreground">Call us</span>
-              <span className="text-foreground/65">0000 000 0000</span>
+              <span className="text-foreground/65">+44 7974 369 854</span>
             </a>
             <a
-              href="mailto:hello@hearthcare.co.uk"
-              className="flex items-center gap-3 rounded-2xl border border-border/70 bg-background px-5 py-4 text-sm transition-colors hover:border-primary/40"
+              href="mailto:contact@bethelspringsgroup.com"
+              className="flex items-center gap-3 rounded-2xl border border-border/70 bg-white px-5 py-4 text-sm transition-colors hover:border-primary/40"
             >
               <Mail className="h-4 w-4 text-primary" />
               <span className="font-medium text-foreground">Email us</span>
-              <span className="text-foreground/65">hello@hearthcare.co.uk</span>
+              <span className="text-foreground/65">contact@bethelspringsgroup.com</span>
             </a>
           </div>
         </div>
@@ -90,9 +90,9 @@ const ApplyFaqs = () => {
                 className={`${idx !== faqs.length - 1 && "border-b"} py-7 `}
               >
                 <div className="flex items-start gap-4">
-                  <span className="mt-0.5 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
                     <HelpCircle className="h-4 w-4" strokeWidth={1.75} />
-                  </span>
+                  </div>
                   <div>
                     <h3 className="font-display text-lg font-medium tracking-tight text-foreground">
                       {faq.q}

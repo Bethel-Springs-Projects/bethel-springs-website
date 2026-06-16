@@ -5,7 +5,8 @@ import {
   AccordionTrigger,
 } from "../ui/accordion";
 import Image from "next/image";
-import { nursePatient } from "@/assets/images";
+import { nursePatient2 } from "@/assets/images";
+import React from "react";
 
 export const faqs = [
   {
@@ -23,11 +24,11 @@ export const faqs = [
     answer:
       "We don’t directly provide accommodation. We support individuals within their existing home or accommodation setting with structured care and assistance.",
   },
-//   {
-//     question: "Can support be provided overnight or full-time?",
-//     answer:
-//       "Yes. Support can be arranged based on individual needs, including daytime support, overnight care, or 24-hour assistance where required.",
-//   },
+  //   {
+  //     question: "Can support be provided overnight or full-time?",
+  //     answer:
+  //       "Yes. Support can be arranged based on individual needs, including daytime support, overnight care, or 24-hour assistance where required.",
+  //   },
   {
     question: "How do I apply for support?",
     answer:
@@ -51,7 +52,7 @@ const Faqs = () => {
       <div className="grid md:grid-cols-2">
         <div className="relative max-md:hidden md:min-h-screen md:max-h-[801px] lg:max-h-[770px] w-full overflow-hidden bg-muted lg:aspect-auto">
           <Image
-            src={nursePatient}
+            src={nursePatient2}
             alt="A carer helping an adult prepare food together in a warm sunlit kitchen"
             width={1600}
             height={1280}
@@ -75,25 +76,21 @@ const Faqs = () => {
             className="mt-8 md:mt-10 max-w-[775px]"
           >
             {faqs.map((faq, idx) => (
-              <>
-                <AccordionItem
-                  value={faq.question}
-                  className="border-b-0!"
-                  key={idx}
-                >
-                  <AccordionTrigger className="font-bold text-lg md:text-xl leading-8 p-0 [&>svg]:text-white!">
+              <React.Fragment key={idx}>
+                <AccordionItem value={faq.question} className="border-b-0!">
+                  <AccordionTrigger className="font-medium text-lg md:text-xl leading-8 p-0 [&>svg]:text-white!">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-base font-light leading-6 py-2 sm:pt-4">
+                  <AccordionContent className="text-base font-light leading-6">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
                 <div
                   className={`${
                     idx !== faqs.length - 1 ? "" : "hidden"
-                  } h-px w-full bg-neutral-300 my-3 md:my-4`}
+                  } h-px w-full bg-neutral-300 my-3 `}
                 />
-              </>
+              </React.Fragment>
             ))}
           </Accordion>
         </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { nursePatient } from "@/assets/images";
+import { nursePatient, nursePatient3 } from "@/assets/images";
 import { Compass, HeartHandshake, House, ShieldCheck } from "lucide-react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -74,7 +74,7 @@ const WhatWeDo = () => {
 
         <div className="max-lg:hidden bg-neutral-200/20 rounded-[16px] overflow-hidden ">
           <Image
-            src={nursePatient}
+            src={nursePatient3}
             alt="what we do image"
             className="size-full object-cover"
           />

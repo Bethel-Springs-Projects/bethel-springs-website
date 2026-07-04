@@ -54,10 +54,13 @@ const ApplyFaqs = () => {
             >
               <Mail className="h-4 w-4 text-primary" />
               <span className="font-medium text-foreground">Email us</span>
-              <span className="text-foreground/65">contact@bethelspringsgroup.com</span>
+              <span className="text-foreground/65">
+                contact@bethelspringsgroup.com
+              </span>
             </a>
           </div>
         </div>
+
         <div className="lg:col-span-7 mt-8 md:mt-10">
           <Accordion
             type="single"
@@ -66,7 +69,7 @@ const ApplyFaqs = () => {
           >
             {faqs.map((faq, idx) => (
               <>
-                <AccordionItem value={faq.q} className="border-b-0!" key={idx}>
+                <AccordionItem key={idx} value={faq.q} className="border-b-0!">
                   <AccordionTrigger className="text-lg font-medium max-md:tracking-tight text-foreground md:text-xl leading-8 p-0 [&>svg]:text-primary">
                     {faq.q}
                   </AccordionTrigger>

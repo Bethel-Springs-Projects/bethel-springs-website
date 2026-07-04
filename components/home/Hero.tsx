@@ -36,7 +36,7 @@ const Hero = () => {
             </Link>
 
             <Link
-              href="/#contact"
+              href="/contact"
               className="flex items-center h-[41px] md:h-[45px] px-3.25 md:px-6.25 border border-primary text-primary hover:text-primary hover:bg-primary/5 rounded-full"
             >
               Contact Us

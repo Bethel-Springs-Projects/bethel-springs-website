@@ -3,7 +3,7 @@ import Script from "next/script";
 export default function JsonLd() {
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": "Organization",
     name: "Bethel Springs",
     image: "https://bethelspringsgroup.com/og-image.png",
     description:

@@ -1,10 +1,10 @@
 "use client";
 
-import { Mail, Phone, PhoneCall } from "lucide-react";
+import { Loader2, Mail, PhoneCall } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Field, FieldError, FieldLabel, FieldSet } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
-import { PhoneInput, phoneSchema } from "@/components/ui/phone-input";
+import { PhoneInput } from "@/components/ui/phone-input";
 import {
   Select,
   SelectContent,
@@ -16,56 +16,17 @@ import { Textarea } from "@/components/ui/textarea";
 import { Controller, useForm } from "react-hook-form";
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-
-const enquiryType = [
-  "General enquiry",
-  "Care at home",
-  "Supported living",
-  "Urgent help",
-  "Something else",
-] as const;
-
-const enquiryFor = [
-  "Myself",
-  "Parent",
-  "Child",
-  "Partner",
-  "Relative",
-  "Client / Patient",
-  "Other",
-] as const;
-
-const contactSchema = z.object({
-  enquiryType: z.enum(enquiryType, {
-    error: "Please select an enquiry type",
-  }),
-  enquiryFor: z.enum(enquiryFor, {
-    error: "Please select an enquiry type",
-  }),
-  name: z
-    .string()
-    .min(3, "First name must be at least 3 characters long")
-    .max(100, "First name must be less than 100 characters long")
-    .regex(
-      /^[a-zA-Z\s'-]+$/,
-      "First name can only contain letters, spaces, hyphens, and apostrophes",
-    ),
-  email: z
-    .email("Enter a valid email address")
-    .max(100, "email must be less than 100 characters long"),
-  phoneNumber: phoneSchema,
-  message: z
-    .string()
-    .min(5, "Message must be at least 5 characters")
-    .max(500, "Message is too long")
-    .optional()
-    .or(z.literal("")),
-});
-
-export type ContactData = z.infer<typeof contactSchema>;
+import { useState } from "react";
+import { sendContactEmail } from "@/app/(home)/contact/actions";
+import {
+  ContactData,
+  contactSchema,
+  enquiryFor,
+  enquiryType,
+} from "@/lib/contactSchema";
 
 const ContactPageContent = () => {
-  const { handleSubmit, control } = useForm<ContactData>({
+  const { handleSubmit, control, setError, reset } = useForm<ContactData>({
     resolver: zodResolver(contactSchema),
     defaultValues: {
       enquiryType: undefined,
@@ -76,9 +37,51 @@ const ContactPageContent = () => {
       message: "",
     },
   });
-  const onSubmit = (data: ContactData) => {
-    console.log(data);
+  const [isPending, setIsPending] = useState(false);
+  const [status, setStatus] = useState<
+    Partial<{
+      msg: string;
+      status: "idle" | "success" | "failed";
+    }>
+  >({});
+  console.log("Status:", status);
+
+  const onSubmit = async (data: ContactData) => {
+    setIsPending(true);
+    const result = await sendContactEmail(data);
+    setIsPending(false);
+
+    if (result.success) {
+      setStatus({
+        msg: "Message received. Our team will review it and respond shortly",
+        status: "success",
+      });
+      reset();
+    }
+
+    if (result.errors) {
+      // Check if it's a general error (from Resend)
+      if ("general" in result.errors) {
+        setStatus({
+          msg: String(result.errors.general),
+          status: "failed",
+        });
+      } else {
+        // It's field errors from Zod
+        Object.entries(result.errors).forEach(([field, messages]) => {
+          setError(field as keyof ContactData, {
+            type: "server",
+            message: messages?.[0],
+          });
+        });
+        setStatus({
+          msg: "Please fix the errors above.",
+          status: "failed",
+        });
+      }
+    }
   };
+
   return (
     <div>
       <section className="padding-x padding-y bg-primary/10">
@@ -289,13 +292,20 @@ const ContactPageContent = () => {
           </FieldSet>
 
           <Button
-            // disabled={isPending}
+            disabled={isPending}
             type="submit"
             className="mt-12 sm:mt-6 submit-button"
           >
-            Submit
+            {isPending ? <Loader2 className="size-6 animate-spin" /> : "Submit"}
           </Button>
         </form>
+        {status.msg && (
+          <p
+            className={`${status.status === "failed" ? "text-red-500" : "text-green-400"} font-inter mt-3 `}
+          >
+            {status.msg}
+          </p>
+        )}
       </div>
 
       <div className="padding-x py-10 md:py-25">

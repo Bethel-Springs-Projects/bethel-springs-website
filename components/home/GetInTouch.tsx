@@ -18,7 +18,7 @@ const GetInTouch = () => {
             </p>
             <div className="mt-6 md:mt-8 flex flex-wrap gap-3">
               <a
-                href="mailto:contact@bethelspringsgroup.com"
+                href="/contact"
                 className="h-[41px] md:h-[45px] px-3 md:px-6 inline-flex items-center gap-2 rounded-full bg-primary text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
               >
                 Contact Us <ArrowRight className="h-4 w-4" />

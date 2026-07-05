@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import JsonLd from "@/components/layout/JsonLd";
+import { Toaster } from "sonner";
 
 const satoshi = localFont({
   src: "../assets/fonts/Satoshi-Variable.ttf",
@@ -73,7 +74,7 @@ export const metadata: Metadata = {
       "Professional care and supported living services across the UK.",
     images: ["https://bethelspringsgroup.com/og-image.jpg"],
   },
-  
+
   // todo
   other: {
     "geo.position": "51.5074;-0.1278", // latitude;longitude (replace with your actual)
@@ -108,6 +109,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         {children}
+        <Toaster position="top-right" richColors />
         <JsonLd />
       </body>
     </html>

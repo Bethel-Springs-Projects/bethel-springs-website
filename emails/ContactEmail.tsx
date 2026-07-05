@@ -111,27 +111,26 @@ export default function ContactEmail({
                     </a>
                   </Column>
                 </Row>
-                {phoneNumber && (
-                  <Row className="border-b border-gray-100 py-2">
-                    <Column className="w-1/3 text-gray-500 text-sm font-medium">
-                      Phone
-                    </Column>
-                    <Column className="w-2/3 text-gray-800 text-sm">
-                      <a
-                        href={`tel:${phoneNumber}`}
-                        className="text-blue-600 no-underline"
-                      >
-                        {phoneNumber}
-                      </a>
-                    </Column>
-                  </Row>
-                )}
+
+                <Row className="border-b border-gray-100 py-2">
+                  <Column className="w-1/3 text-gray-500 text-sm font-medium">
+                    Phone
+                  </Column>
+                  <Column className="w-2/3 text-gray-800 text-sm">
+                    <a
+                      href={`tel:${phoneNumber}`}
+                      className="text-blue-600 no-underline"
+                    >
+                      {phoneNumber}
+                    </a>
+                  </Column>
+                </Row>
               </Section>
 
               {message && (
                 <>
                   <Hr className="my-4 border-gray-200" />
-                  <Heading className="text-md font-semibold text-gray-700 m-0 mb-2">
+                  <Heading className="text-lg font-semibold text-gray-700 m-0 mb-2">
                     Message
                   </Heading>
                   <Text className="text-gray-700 text-sm whitespace-pre-wrap bg-gray-50 p-4 rounded border border-gray-200">
@@ -150,7 +149,8 @@ export default function ContactEmail({
                 This email was sent from your website’s contact form.
               </Text>
               <Text className="text-xs text-gray-400 m-0 mt-1">
-                © {new Date().getFullYear()} Bethel Springs. All rights reserved.
+                © {new Date().getFullYear()} Bethel Springs. All rights
+                reserved.
               </Text>
             </Section>
           </Container>

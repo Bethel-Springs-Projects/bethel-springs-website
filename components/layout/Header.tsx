@@ -57,7 +57,7 @@ const Header = () => {
           </ul>
         </nav>
 
-        <Link href="/#contact" className="max-md:hidden flex items-center text-sm h-[38px] px-3.25 rounded-full hover:bg-primary/90 bg-primary text-white">
+        <Link href="/contact" className="max-md:hidden flex items-center text-sm h-[38px] px-3.25 rounded-full hover:bg-primary/90 bg-primary text-white">
           Contact Us
         </Link>
 

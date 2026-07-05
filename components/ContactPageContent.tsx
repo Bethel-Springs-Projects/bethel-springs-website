@@ -14,7 +14,6 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { Controller, useForm } from "react-hook-form";
-import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import { sendContactEmail } from "@/app/(home)/contact/actions";
@@ -24,6 +23,7 @@ import {
   enquiryFor,
   enquiryType,
 } from "@/lib/contactSchema";
+import { toast } from "sonner";
 
 const ContactPageContent = () => {
   const { handleSubmit, control, setError, reset } = useForm<ContactData>({
@@ -52,10 +52,12 @@ const ContactPageContent = () => {
     setIsPending(false);
 
     if (result.success) {
+      toast.success("Message received.");
       setStatus({
         msg: "Message received. Our team will review it and respond shortly",
         status: "success",
       });
+
       reset();
     }
 

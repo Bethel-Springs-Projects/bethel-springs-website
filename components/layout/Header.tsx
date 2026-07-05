@@ -24,7 +24,10 @@ const homeLinks = [
     title: "Who we support",
     href: "/#who",
   },
-
+  {
+    title: "Contact us",
+    href: "/contact",
+  },
   {
     title: "Apply",
     href: "/apply",
@@ -43,21 +46,26 @@ const Header = () => {
             fill
           />
         </Link>
-
+        {/* Desktop navs */}
         <nav className="max-md:hidden">
           <ul className="flex gap-5 lg:gap-7">
-            {homeLinks.map((link, idx) => (
-              <li
-                key={idx}
-                className="text-sm leading-5 hover:text-primary duration-200"
-              >
-                <a href={link.href}>{link.title}</a>
-              </li>
-            ))}
+            {homeLinks
+              .filter((link) => link.title !== "Contact us")
+              .map((link, idx) => (
+                <li
+                  key={idx}
+                  className="text-sm leading-5 hover:text-primary duration-200"
+                >
+                  <a href={link.href}>{link.title}</a>
+                </li>
+              ))}
           </ul>
         </nav>
 
-        <Link href="/contact" className="max-md:hidden flex items-center text-sm h-[38px] px-3.25 rounded-full hover:bg-primary/90 bg-primary text-white">
+        <Link
+          href="/contact"
+          className="max-md:hidden flex items-center text-sm h-[38px] px-3.25 rounded-full hover:bg-primary/90 bg-primary text-white"
+        >
           Contact Us
         </Link>
 
@@ -79,8 +87,11 @@ const Header = () => {
                 asChild
                 className="text-sm leading-5 hover:bg-primary/5!"
               >
-                <Link href={link.href} className="hover:text-primary!">
-                  { link.title}
+                <Link
+                  href={link.href}
+                  className="hover:text-primary! cursor-pointer"
+                >
+                  {link.title}
                 </Link>
               </DropdownMenuItem>
             ))}

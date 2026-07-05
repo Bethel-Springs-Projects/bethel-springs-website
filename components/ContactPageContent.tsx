@@ -88,10 +88,10 @@ const ContactPageContent = () => {
     <div>
       <section className="padding-x padding-y bg-primary/10">
         <div className="flex flex-col items-center">
-          <h1 className=" mt-2 md:mt-4 text-3xl md:text-[48px] lg:text-[56px] leading-10 md:leading-tight font-medium max-w-[580px]">
+          <h1 className=" mt-2 md:mt-4 text-3xl md:text-[48px] lg:text-[56px] leading-10 md:leading-tight font-semibold md:font-medium max-w-[580px]">
             Contact Support
           </h1>
-          <p className="mt-4 md:mt-6 text-base leading-relaxed md:leading-7 text-foreground/70 max-w-[450px] md:max-w-[520px] text-center">
+          <p className="mt-4 md:mt-6 text-sm md:text-base leading-5.5 md:leading-7 text-foreground/70 max-w-[380px] md:max-w-[520px] text-center">
             Our support team is always ready to assist you with any questions,
             concerns or assistance you may need.
           </p>
@@ -104,7 +104,7 @@ const ContactPageContent = () => {
           className="rounded-lg max-w-[864px] mx-auto bg-white"
         >
           <FieldSet className="gap-6">
-            <div className="grid sm:grid-cols-2 gap-2.5 md:gap-4.5">
+            <div className="grid sm:grid-cols-2 gap-6 md:gap-4.5">
               <Controller
                 name="enquiryType"
                 control={control}
@@ -212,7 +212,7 @@ const ContactPageContent = () => {
               )}
             />
 
-            <div className="grid sm:grid-cols-2 gap-2.5 md:gap-4.5">
+            <div className="grid sm:grid-cols-2 gap-6 md:gap-4.5">
               <Controller
                 name="email"
                 control={control}
@@ -303,7 +303,7 @@ const ContactPageContent = () => {
         </form>
         {status.msg && (
           <p
-            className={`${status.status === "failed" ? "text-red-500" : "text-green-400"} font-inter mt-3 `}
+            className={`${status.status === "failed" ? "text-red-500" : "text-primary"} font-inter mt-3 `}
           >
             {status.msg}
           </p>
@@ -330,6 +330,7 @@ const ContactPageContent = () => {
               contact@bethelspringsgroup.com
             </a>
           </div>
+          
           <div className="px-4.5 py-6 space-y-1 bg-primary/10 rounded-lg">
             <div className="size-10 flex items-center justify-center bg-primary rounded-full">
               <PhoneCall className="size-5 text-white" />

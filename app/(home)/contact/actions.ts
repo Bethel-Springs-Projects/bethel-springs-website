@@ -21,7 +21,7 @@ export async function sendContactEmail(data: ContactData) {
     // Send
     const html = await render(ContactEmail(result.data));
     const { error } = await resend.emails.send({
-      from: `Website <info@bethelspringsgroup.com>`,
+      from: `Website <contact@bethelspringsgroup.com>`,
       to: ["contact@bethelspringsgroup.com"],
       replyTo: result.data.email,
       subject: `New: ${result.data.enquiryType} from ${result.data.name}`,

@@ -49,19 +49,20 @@ export default function ContactEmail({
               style={{ backgroundColor: PRIMARY_COLOR, padding: "20px 30px" }}
             >
               <Row>
-                <Column>
-                  {/* Optional logo – uncomment and replace src with your image */}
+                <Column style={{ verticalAlign: "middle", textAlign: "left" }}>
+                  <Heading className="text-white text-xl font-semibold m-0">
+                    New Contact Form Submission
+                  </Heading>
+                </Column>
+
+                <Column style={{ width: "100px", verticalAlign: "middle" }}>
                   <img
                     src="https://bethelspringsgroup.com/bethel-springs-logo.webp"
                     alt="Company Logo"
-                    width="120"
+                    width="100"
                     height="auto"
-                    className="text-white text-xs"
                     style={{ display: "block" }}
                   />
-                  <Heading className="text-white text-xl font-semibold mt-1">
-                    New Contact Form Submission
-                  </Heading>
                 </Column>
               </Row>
             </Section>

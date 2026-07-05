@@ -18,7 +18,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Bethel Springs | Supported Living & Care Services",
+  metadataBase: new URL("https://www.bethelspringsgroup.com/"),
+  title: {
+    default: "Bethel Springs | Supported Living & Care Services",
+    template: "%s | Bethel Springs",
+  },
+
   description:
     "Professional supported living and care services for adults with autism, learning disabilities, and additional support needs. Providing compassionate, person-centred care across the UK.",
 
@@ -49,17 +54,26 @@ export const metadata: Metadata = {
     "independent living support",
   ],
 
+  authors: [{ name: "Bethel Springs", url: "https://www.bethelspringsgroup.com/" }],
+  creator: "Bethel Springs",
+  publisher: "Bethel Springs",
+  formatDetection: {
+    email: true,
+    address: true,
+    telephone: true,
+  },
+
   openGraph: {
     title: "Bethel Springs | Supported Living & Care Services",
     description:
       "Person-centred supported living and care services for adults with additional needs across the UK.",
     type: "website",
     locale: "en_GB",
-    url: "https://bethelspringsgroup.com",
+    url: "https://www.bethelspringsgroup.com",
     siteName: "Bethel Springs",
     images: [
       {
-        url: "https://bethelspringsgroup.com/og-image.png",
+        url: "https://www.bethelspringsgroup.com/og-image.png",
         width: 1200,
         height: 630,
         alt: "Supported Living Care Services",
@@ -72,7 +86,9 @@ export const metadata: Metadata = {
     title: "Bethel Springs | Supported Living & Care Services ",
     description:
       "Professional care and supported living services across the UK.",
-    images: ["https://bethelspringsgroup.com/og-image.jpg"],
+    images: ["/og-image.png"],
+    creator: "@bethelsprings",
+    site: "@bethelsprings",
   },
 
   // todo
@@ -84,7 +100,7 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: "https://bethelspringsgroup.com",
+    canonical: "https://www.bethelspringsgroup.com",
   },
 
   robots: {

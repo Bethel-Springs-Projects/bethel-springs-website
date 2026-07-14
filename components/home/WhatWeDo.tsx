@@ -1,7 +1,7 @@
 "use client";
 
-import { nursePatient, nursePatient3 } from "@/assets/images";
-import { Compass, HeartHandshake, House, ShieldCheck } from "lucide-react";
+import { nursePatient3 } from "@/assets/images";
+import { HeartHandshake, Home, House, ShieldCheck } from "lucide-react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
@@ -12,7 +12,7 @@ const services = [
   {
     title: "Supported Living Accommodation",
     description:
-      "Dedicated support delivered in the individual’s own home, assisting with everyday living tasks and wellbeing",
+      "Dedicated support care in the individual’s own home, assisting with everyday living tasks and wellbeing",
     icon: House,
   },
   {
@@ -22,15 +22,15 @@ const services = [
     icon: HeartHandshake,
   },
   {
-    title: "Independence & Life Skills",
+    title: "Domiciliary Care",
     description:
-      "Building confidence and the skills needed to live more independently, at a comfortable pace.",
-    icon: Compass,
+      "Flexible, in-home support where trained carers visit at scheduled times to administer care",
+    icon: Home,
   },
   {
     title: "Routine & Behavioural Support",
     description:
-      "Consistent routines and positive behavioural support that encourage calm, structured, and stable overall wellbeing.",
+      "Consistent routines and positive behavioural support that encourage calm, structured, and stable wellbeing.",
     icon: ShieldCheck,
   },
 ];
@@ -39,12 +39,8 @@ const WhatWeDo = () => {
   return (
     <section id="what" className="padding-x padding-y lg:pb-25!">
       <div>
-        <p className="sub-title">
-          What We Do
-        </p>
-        <h2 className="title">
-          Care that fits around the person
-        </h2>
+        <p className="sub-title">What We Do</p>
+        <h2 className="title">Care that fits around the person</h2>
         <p className="sec-intro">
           A full range of supported living services delivered with patience,
           respect and consistency.

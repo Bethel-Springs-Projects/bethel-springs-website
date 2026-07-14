@@ -20,7 +20,8 @@ interface ContactEmailProps {
   enquiryFor: string;
   name: string;
   email: string;
-  phoneNumber?: string;
+  phoneNumber: string;
+  country: string;
   message?: string;
 }
 
@@ -33,6 +34,7 @@ export default function ContactEmail({
   name,
   email,
   phoneNumber,
+  country,
   message,
 }: ContactEmailProps) {
   return (
@@ -83,6 +85,7 @@ export default function ContactEmail({
                     {enquiryType}
                   </Column>
                 </Row>
+
                 <Row className="border-b border-gray-100 py-2">
                   <Column className="w-1/3 text-gray-500 text-sm font-medium">
                     Enquiry For
@@ -91,6 +94,7 @@ export default function ContactEmail({
                     {enquiryFor}
                   </Column>
                 </Row>
+
                 <Row className="border-b border-gray-100 py-2">
                   <Column className="w-1/3 text-gray-500 text-sm font-medium">
                     Name
@@ -99,6 +103,7 @@ export default function ContactEmail({
                     {name}
                   </Column>
                 </Row>
+
                 <Row className="border-b border-gray-100 py-2">
                   <Column className="w-1/3 text-gray-500 text-sm font-medium">
                     Email
@@ -110,6 +115,15 @@ export default function ContactEmail({
                     >
                       {email}
                     </a>
+                  </Column>
+                </Row>
+
+                <Row className="border-b border-gray-100 py-2">
+                  <Column className="w-1/3 text-gray-500 text-sm font-medium">
+                    Country
+                  </Column>
+                  <Column className="w-2/3 text-gray-800 text-sm">
+                    {country}
                   </Column>
                 </Row>
 

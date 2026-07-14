@@ -7,10 +7,10 @@ export default function HomeLayout({
   children: React.ReactNode;
 }) {
   return (
-    <>
+    <div>
       <Header />
-      <main className="text-txt">{children}</main>
+      <main className="text-txt max-w-[1530px] mx-auto">{children}</main>
       <Footer />
-    </>
+    </div>
   );
 }

@@ -50,7 +50,7 @@ const Faqs = () => {
   return (
     <section className=" bg-primary text-white">
       <div className="grid md:grid-cols-2">
-        <div className="relative max-md:hidden md:min-h-screen md:max-h-[801px] lg:max-h-[770px] w-full overflow-hidden bg-muted lg:aspect-auto">
+        <div className="relative max-md:hidden md:max-h-[801px] lg:max-h-[770px] w-full overflow-hidden bg-muted lg:aspect-auto">
           <Image
             src={nursePatient2}
             alt="A carer helping an adult prepare food together in a warm sunlit kitchen"

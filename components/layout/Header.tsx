@@ -37,7 +37,7 @@ const homeLinks = [
 const Header = () => {
   return (
     <header className="py-2 md:py-4 padding-x">
-      <div className="container flex items-center justify-between">
+      <div className="flex items-center justify-between max-w-[1536px] mx-auto">
         <Link href="/" className="relative w-16 md:w-19 h-10 md:h-12 shrink-0">
           <Image
             src={bsLogo.src}

@@ -24,19 +24,23 @@ import {
   enquiryType,
 } from "@/lib/contactSchema";
 import { toast } from "sonner";
+import { Country, CountryDropdown } from "./ui/country-dropdown";
 
 const ContactPageContent = () => {
-  const { handleSubmit, control, setError, reset } = useForm<ContactData>({
-    resolver: zodResolver(contactSchema),
-    defaultValues: {
-      enquiryType: undefined,
-      enquiryFor: undefined,
-      name: "",
-      email: "",
-      phoneNumber: "",
-      message: "",
-    },
-  });
+  const { handleSubmit, control, setError, reset, setValue } =
+    useForm<ContactData>({
+      resolver: zodResolver(contactSchema),
+      defaultValues: {
+        enquiryType: undefined,
+        enquiryFor: undefined,
+        name: "",
+        email: "",
+        country: "",
+        phoneNumber: "",
+        message: "",
+      },
+    });
+  const [selectedCountry, setSelectedCountry] = useState<Country | null>(null);
   const [isPending, setIsPending] = useState(false);
   const [status, setStatus] = useState<
     Partial<{
@@ -44,11 +48,16 @@ const ContactPageContent = () => {
       status: "idle" | "success" | "failed";
     }>
   >({});
+
   console.log("Status:", status);
 
   const onSubmit = async (data: ContactData) => {
     setIsPending(true);
-    const result = await sendContactEmail(data);
+    const payload = {
+      ...data,
+      country: selectedCountry ? selectedCountry.name : "Not specified",
+    };
+    const result = await sendContactEmail(payload);
     setIsPending(false);
 
     if (result.success) {
@@ -187,32 +196,31 @@ const ContactPageContent = () => {
               />
             </div>
 
-            <Controller
-              name="name"
-              control={control}
-              render={({ field, fieldState }) => (
-                <Field data-invalid={fieldState.invalid} className="gap-1">
-                  <FieldLabel htmlFor={field.name} className="form-label">
-                    Name
-                  </FieldLabel>
-                  <Input
-                    {...field}
-                    id={field.name}
-                    aria-invalid={fieldState.invalid}
-                    placeholder="Your Name"
-                    className="form-input"
-                  />
-                  {fieldState.invalid && (
-                    <FieldError
-                      errors={[fieldState.error]}
-                      className="form-error"
-                    />
-                  )}
-                </Field>
-              )}
-            />
-
             <div className="grid sm:grid-cols-2 gap-6 md:gap-4.5">
+              <Controller
+                name="name"
+                control={control}
+                render={({ field, fieldState }) => (
+                  <Field data-invalid={fieldState.invalid} className="gap-1">
+                    <FieldLabel htmlFor={field.name} className="form-label">
+                      Name
+                    </FieldLabel>
+                    <Input
+                      {...field}
+                      id={field.name}
+                      aria-invalid={fieldState.invalid}
+                      placeholder="Your Name"
+                      className="form-input"
+                    />
+                    {fieldState.invalid && (
+                      <FieldError
+                        errors={[fieldState.error]}
+                        className="form-error"
+                      />
+                    )}
+                  </Field>
+                )}
+              />
               <Controller
                 name="email"
                 control={control}
@@ -238,6 +246,37 @@ const ContactPageContent = () => {
                   </Field>
                 )}
               />
+            </div>
+
+            <div className="flex gap-4.5">
+              <Controller
+                name="country"
+                control={control}
+                render={({ field, fieldState }) => (
+                  <Field
+                    data-invalid={fieldState.invalid}
+                    className="min-w-20 md:min-w-[108px] flex-1 gap-1"
+                  >
+                    <FieldLabel className="form-label">Country</FieldLabel>
+                    <CountryDropdown
+                      defaultValue={field.value}
+                      onChange={(country) => {
+                        field.onChange(country.alpha2);
+                        setSelectedCountry(country);
+                        setValue("phoneNumber", country.countryCallingCodes[0]);
+                      }}
+                      className="form-input gap-"
+                      slim
+                    />
+                    {fieldState.invalid && (
+                      <FieldError
+                        errors={[fieldState.error]}
+                        className="form-error"
+                      />
+                    )}
+                  </Field>
+                )}
+              />
 
               <Controller
                 name="phoneNumber"
@@ -251,6 +290,12 @@ const ContactPageContent = () => {
                       {...field}
                       value={field.value}
                       onChange={field.onChange}
+                      defaultCountry={selectedCountry?.alpha2}
+                      onCountryChange={(country) => {
+                        if (!country) return;
+                        setSelectedCountry(country as Country);
+                        setValue("country", country?.alpha2);
+                      }}
                       inline
                       aria-invalid={fieldState.invalid}
                       className="form-input border"
@@ -274,14 +319,19 @@ const ContactPageContent = () => {
                   <FieldLabel htmlFor={field.name} className="form-label">
                     Message (Optional)
                   </FieldLabel>
-                  <Textarea
-                    {...field}
-                    id={field.name}
-                    aria-invalid={fieldState.invalid}
-                    maxLength={500}
-                    placeholder="Write us what you are really concern about..."
-                    className="form-input h-[204px]! font-roboto"
-                  />
+                  <div className="relative">
+                    <Textarea
+                      {...field}
+                      id={field.name}
+                      aria-invalid={fieldState.invalid}
+                      maxLength={500}
+                      className="form-input h-[204px]! font-roboto"
+                    />
+                    <p className="absolute right-2 bottom-2 text-primary">
+                      {field.value?.length} / 500
+                    </p>
+                  </div>
+
                   {fieldState.invalid && (
                     <FieldError
                       errors={[fieldState.error]}
@@ -330,7 +380,7 @@ const ContactPageContent = () => {
               contact@bethelspringsgroup.com
             </a>
           </div>
-          
+
           <div className="px-4.5 py-6 space-y-1 bg-primary/10 rounded-lg">
             <div className="size-10 flex items-center justify-center bg-primary rounded-full">
               <PhoneCall className="size-5 text-white" />

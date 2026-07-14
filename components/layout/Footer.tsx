@@ -2,21 +2,13 @@ import { bsLogo } from "@/assets/images";
 import Image from "next/image";
 import Link from "next/link";
 
-import {
-  Mail,
-  Phone,
-  MapPin,
-  X,
-  // Twitter,
-  // Linkedin,
-  // Instagram,
-} from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 import { Facebook, Instagram, Youtube } from "../icons";
 
 const Footer = () => {
   return (
     <footer className="border-t border-gray-200 bg-white">
-      <div className="padding-x pt-10 md:pt-12 pb-6">
+      <div className="padding-x pt-10 md:pt-12 pb-6 max-w-[1536px] mx-auto">
         {/* 3-column grid: brand | contact | social */}
         <div className="grid grid-cols-1 gap-8 grid-cols-2 md:grid-cols-3 md:gap-12">
           {/* Brand */}

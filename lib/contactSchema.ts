@@ -45,6 +45,9 @@ export const contactSchema = z.object({
   email: z
     .email("Enter a valid email address")
     .max(100, "email must be less than 100 characters long"),
+  country: z
+    .string("must provide a valid country")
+    .max(100, "country must be less than 100 characters long"),
   phoneNumber: phoneSchema,
   message: z
     .string()

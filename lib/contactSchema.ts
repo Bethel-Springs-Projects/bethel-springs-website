@@ -2,11 +2,11 @@ import { isValidPhoneNumber } from "libphonenumber-js";
 import * as z from "zod";
 
 export const enquiryType = [
-  "General enquiry",
-  "Care at home",
-  "Supported living",
-  "Urgent help",
-  "Something else",
+  "General_enquiry",
+  "Care_at_home",
+  "Supported_living",
+  "Urgent_help",
+  "Something_else",
 ] as const;
 
 export const enquiryFor = [
@@ -15,7 +15,7 @@ export const enquiryFor = [
   "Child",
   "Partner",
   "Relative",
-  "Client / Patient",
+  "Client_/_Patient",
   "Other",
 ] as const;
 
@@ -32,7 +32,7 @@ export const contactSchema = z.object({
     error: "Please select an enquiry type",
   }),
   enquiryFor: z.enum(enquiryFor, {
-    error: "Please select an enquiry type",
+    error: "Please select who it's for",
   }),
   name: z
     .string()

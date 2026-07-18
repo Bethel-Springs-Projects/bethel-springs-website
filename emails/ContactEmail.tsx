@@ -82,7 +82,7 @@ export default function ContactEmail({
                     Enquiry Type
                   </Column>
                   <Column className="w-2/3 text-gray-800 text-sm">
-                    {enquiryType}
+                    {enquiryType.replace(/_/g, " ")}
                   </Column>
                 </Row>
 
@@ -91,7 +91,7 @@ export default function ContactEmail({
                     Enquiry For
                   </Column>
                   <Column className="w-2/3 text-gray-800 text-sm">
-                    {enquiryFor}
+                    {enquiryFor.replace(/_/g, " ")}
                   </Column>
                 </Row>
 

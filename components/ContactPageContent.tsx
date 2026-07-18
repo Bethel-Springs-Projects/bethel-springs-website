@@ -124,7 +124,7 @@ const ContactPageContent = () => {
                     </FieldLabel>
                     <Select
                       name={field.name}
-                      value={field.value}
+                      value={field.value ?? ""}
                       onValueChange={field.onChange}
                     >
                       <SelectTrigger
@@ -132,15 +132,13 @@ const ContactPageContent = () => {
                         aria-invalid={fieldState.invalid}
                         className="form-input !h-14 relative"
                       >
-                        <SelectValue
-                          placeholder={field.value || "General enquiry"}
-                        />
+                        <SelectValue placeholder="Select enquiry type" />
                       </SelectTrigger>
 
                       <SelectContent position="popper">
                         {enquiryType.map((type) => (
                           <SelectItem key={type} value={type}>
-                            {type}
+                            {type.replace(/_/g, " ")}
                           </SelectItem>
                         ))}
                       </SelectContent>
@@ -164,7 +162,7 @@ const ContactPageContent = () => {
                     </FieldLabel>
                     <Select
                       name={field.name}
-                      value={field.value}
+                      value={field.value ?? ""}
                       onValueChange={field.onChange}
                     >
                       <SelectTrigger
@@ -172,15 +170,13 @@ const ContactPageContent = () => {
                         aria-invalid={fieldState.invalid}
                         className="form-input !h-14 relative"
                       >
-                        <SelectValue
-                          placeholder={field.value || "Select an option"}
-                        />
+                        <SelectValue placeholder="Select an option" />
                       </SelectTrigger>
 
                       <SelectContent position="popper">
                         {enquiryFor.map((type) => (
                           <SelectItem key={type} value={type}>
-                            {type}
+                            {type.replace(/_/g, " ")}
                           </SelectItem>
                         ))}
                       </SelectContent>

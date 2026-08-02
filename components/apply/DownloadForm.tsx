@@ -30,14 +30,15 @@ const DownloadForm = () => {
                 Hearthcare Application Form
               </p>
               <p className="mt-1 text-sm text-foreground/65">
-                PDF · 240 KB · 6 pages
+                PDF · 313 KB · 4 pages
               </p>
             </div>
           </div>
 
           <div>
             <a
-              href="#"
+              href="/form/bethel-springs-application.pdf"
+              download
               className="mt-6 flex w-full items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
             >
               Download PDF <Download className="h-4 w-4" />

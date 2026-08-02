@@ -68,7 +68,7 @@ const ApplicationSteps = () => {
                 <p className="mt-2 text-sm md:leading-relaxed text-muted-foreground">
                   {step.desc}
                 </p>
-                
+
                 {step.email && (
                   <a
                     href={`mailto:${step.email}`}
@@ -79,7 +79,8 @@ const ApplicationSteps = () => {
                 )}
                 {step.action && (
                   <a
-                    href="#download"
+                    href="/form/bethel-springs-application.pdf"
+                    download
                     className="mt-4 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-xs md:text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
                   >
                     <ArrowDownToLine className="h-4 w-4" />

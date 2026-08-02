@@ -46,10 +46,12 @@ export const metadata: Metadata = {
 
   keywords: [
     "supported living UK",
+    "domiciliary care London",
     "care services UK",
     "autism support care",
     "learning disabilities support",
     "adult social care UK",
+    "adult cares services london",
     "home care support workers",
     "independent living support",
   ],

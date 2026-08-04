@@ -72,7 +72,7 @@ const ApplicationSteps = () => {
                 </p>
 
                 {step.hint && (
-                  <p className="mt-2 flex gap-2 text-sm text-primary">
+                  <p className="mt-2 flex gap-1.5 text-sm text-primary">
                     <Lightbulb className="h-4 w-4 shrink-0 mt-0.5" /> {step.hint}
                   </p>
                 )}

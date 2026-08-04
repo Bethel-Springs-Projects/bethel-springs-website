@@ -58,12 +58,12 @@ const Footer = () => {
                   +44 7974 369 854
                 </a>
               </li>
-              <li className="flex items-center gap-2">
+              {/* <li className="flex items-center gap-2">
                 <div>
                   <MapPin className="size-4 text-primary" />
                 </div>
                 <span>76 The Brent, Dartford</span>
-              </li>
+              </li> */}
             </ul>
           </div>
 

@@ -1,4 +1,4 @@
-import { Download, FileText } from "lucide-react";
+import { Download, FileText, Lightbulb } from "lucide-react";
 
 const DownloadForm = () => {
   return (
@@ -14,7 +14,7 @@ const DownloadForm = () => {
             and fill it in at your own pace.
           </h2>
           <p className="sec-intro">
-            The form takes around 15 minutes to complete. You can return it by
+            The form takes around 5-10 minutes to complete. You can return it by
             email or post, and someone from our team will be in touch within two
             working days.
           </p>
@@ -30,7 +30,7 @@ const DownloadForm = () => {
                 Hearthcare Application Form
               </p>
               <p className="mt-1 text-sm text-foreground/65">
-                PDF · 313 KB · 4 pages
+                PDF · 327 KB · 4 pages
               </p>
             </div>
           </div>
@@ -43,15 +43,10 @@ const DownloadForm = () => {
             >
               Download PDF <Download className="h-4 w-4" />
             </a>
-            <p className="mt-4 text-xs leading-relaxed text-foreground/60 w-full">
-              Need a printed copy or an easy-read version? Email{" "}
-              <a
-                href="mailto:contact@bethelspringsgroup.com"
-                className="text-primary hover:underline break-all"
-              >
-               contact@bethelspringsgroup.com
-              </a>{" "}
-              and we&apos;ll send one out.
+            <p className="mt-4 flex gap-2 text-sm text-foreground/60 w-full ">
+              <Lightbulb className="h-4 w-4 shrink-0 mt-0.5 text-primary" />
+              Fillable in your browser or Adobe Acrobat (recommended for
+              signatures).
             </p>
           </div>
         </div>

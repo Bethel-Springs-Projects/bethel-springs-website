@@ -5,6 +5,7 @@ import {
   Send,
   Clock,
   Mail,
+  Lightbulb,
 } from "lucide-react";
 
 const steps = [
@@ -20,6 +21,7 @@ const steps = [
     icon: FileText,
     title: "Complete the Form",
     desc: "Fill in all required sections of the form, including personal details and support needs.",
+    hint: "Fillable in your browser or Adobe Acrobat (recommended for signatures).",
   },
   {
     number: "03",
@@ -69,14 +71,21 @@ const ApplicationSteps = () => {
                   {step.desc}
                 </p>
 
+                {step.hint && (
+                  <p className="mt-2 flex gap-2 text-sm text-primary">
+                    <Lightbulb className="h-4 w-4 shrink-0 mt-0.5" /> {step.hint}
+                  </p>
+                )}
+
                 {step.email && (
                   <a
                     href={`mailto:${step.email}`}
-                    className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline break-all"
+                    className="mt-2 inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline break-all"
                   >
                     <Mail className="h-4 w-4" /> {step.email}
                   </a>
                 )}
+
                 {step.action && (
                   <a
                     href="/form/bethel-springs-application.pdf"

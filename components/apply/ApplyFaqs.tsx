@@ -5,6 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "../ui/accordion";
+import React from "react";
 
 const faqs = [
   {
@@ -39,20 +40,21 @@ const ApplyFaqs = () => {
             talk things through — no question is too small.
           </p>
 
+          {/* CIntacts */}
           <div className="mt-4 md:mt-8 space-y-3">
             <a
               href="tel:+447974369854"
-              className="flex items-center gap-3 rounded-2xl border border-border/70 bg-white px-5 py-4 text-sm transition-colors hover:border-primary/40"
+              className="flex items-center gap-3 rounded-2xl border border-border/70 bg-white px-4 md:px-5 py-4 text-sm transition-colors hover:border-primary/40"
             >
-              <Phone className="h-4 w-4 text-primary" />
+              <Phone className="h-4 w-4 text-primary shrink-0" />
               <span className="font-medium text-foreground">Call us</span>
               <span className="text-foreground/65">+44 7974 369 854</span>
             </a>
             <a
               href="mailto:contact@bethelspringsgroup.com"
-              className="flex items-center gap-3 rounded-2xl border border-border/70 bg-white px-5 py-4 text-sm transition-colors hover:border-primary/40"
+              className="flex items-center gap-3 rounded-2xl border border-border/70 bg-white px-4 md:px-5 py-4 text-sm transition-colors hover:border-primary/40 break-all"
             >
-              <Mail className="h-4 w-4 text-primary" />
+              <Mail className="h-4 w-4 text-primary shrink-0" />
               <span className="font-medium text-foreground">Email us</span>
               <span className="text-foreground/65">
                 contact@bethelspringsgroup.com
@@ -68,8 +70,8 @@ const ApplyFaqs = () => {
             className="md:hidden max-w-[775px]"
           >
             {faqs.map((faq, idx) => (
-              <>
-                <AccordionItem key={idx} value={faq.q} className="border-b-0!">
+              <React.Fragment key={idx}>
+                <AccordionItem value={faq.q} className="border-b-0!">
                   <AccordionTrigger className="text-lg font-medium max-md:tracking-tight text-foreground md:text-xl leading-8 p-0 [&>svg]:text-primary">
                     {faq.q}
                   </AccordionTrigger>
@@ -82,7 +84,7 @@ const ApplyFaqs = () => {
                     idx !== faqs.length - 1 ? "" : "hidden"
                   } h-px w-full bg-neutral-300 my-3 md:my-4`}
                 />
-              </>
+              </React.Fragment>
             ))}
           </Accordion>
 

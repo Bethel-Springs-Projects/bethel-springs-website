@@ -9,7 +9,7 @@ export default function HomeLayout({
   return (
     <div>
       <Header />
-      <main className="text-txt max-w-[1530px] mx-auto">{children}</main>
+      <main className="text-txt w-full max-w-[1530px] mx-auto">{children}</main>
       <Footer />
     </div>
   );

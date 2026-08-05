@@ -10,10 +10,10 @@ const DownloadForm = () => {
         <div className="lg:col-span-7">
           <p className="sub-title text-white!">Application form</p>
           <h2 className="title">
-            Download the application form <br className="xxs:hidden xl:block" />{" "}
+            Download the application form <br className="hidden xl:block" />{" "}
             and fill it in at your own pace.
           </h2>
-          <p className="sec-intro">
+          <p className="sec-intro max-w-[550px]">
             The form takes around 5-10 minutes to complete. You can return it by
             email or post, and someone from our team will be in touch within two
             working days.

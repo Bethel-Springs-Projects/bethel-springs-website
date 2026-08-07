@@ -15,7 +15,7 @@ export default function MaintenancePage() {
         </h1>
         <p className="text-sm text-gray-500 max-w-sm leading-relaxed">
           Our website is currently undergoing maintenance.
-          <br />
+          <br className="hidden xxs:block" />
           We&apos;ll be back online shortly.
         </p>
 

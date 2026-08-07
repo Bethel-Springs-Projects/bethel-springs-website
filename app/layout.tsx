@@ -70,7 +70,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Bethel Springs | Domiciliary care Services",
     description:
-      "Person-centred Domiciliary care services for adults with additional needs across the UK.",
+      "Reliable domiciliary care services for adults with special needs across the UK.",
     type: "website",
     locale: "en_GB",
     url: "https://www.bethelspringsgroup.com",

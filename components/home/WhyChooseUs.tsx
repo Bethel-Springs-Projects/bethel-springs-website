@@ -21,10 +21,6 @@ const WhyChooseUs = () => {
       <div>
         <p className="sub-title">05 - Why Choose Us</p>
         <h2 className="title">Care you can trust to be there.</h2>
-        {/* <p className="mt-4 md:mt-3 text-base md:leading-relaxed text-foreground/70">
-          A full range of supported living services delivered with patience,
-          respect and consistency.
-        </p> */}
       </div>
 
       <div className="mt-6 px-4 md:px-6 flex gap-2 bg-primary/3 rounded-[16px] justify-between">

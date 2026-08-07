@@ -64,11 +64,7 @@ const ApplyFaqs = () => {
         </div>
 
         <div className="lg:col-span-7 mt-8 md:mt-10">
-          <Accordion
-            type="single"
-            collapsible
-            className="md:hidden max-w-[775px]"
-          >
+          <Accordion type="single" collapsible>
             {faqs.map((faq, idx) => (
               <React.Fragment key={idx}>
                 <AccordionItem value={faq.q} className="border-b-0!">

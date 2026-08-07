@@ -10,7 +10,7 @@ export const metadata = {
   keywords: [
     "apply for care services",
     "care application UK",
-    "supported living application",
+    "Domiciliary care service application",
     "home care registration",
   ],
   openGraph: {

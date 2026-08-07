@@ -15,9 +15,9 @@ export const faqs = [
       "We support adults with autism, learning disabilities, and additional support needs who require help with daily living and independence.",
   },
   {
-    question: "What is supported living?",
+    question: "What is domiciliary care?",
     answer:
-      "Supported living means individuals live in their own accommodation while receiving tailored support from trained staff to help with daily tasks, safety, and independence.",
+      "Domiciliary care is support provided to individuals in their own homes, with tailored care from trained staff to help with daily needs, safety, and independence.",
   },
   {
     question: "Do you provide accommodation?",

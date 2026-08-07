@@ -7,7 +7,7 @@ export const metadata = {
   keywords: [
     "contact care services",
     "home care enquiries",
-    "supported living contact",
+    "contact domiciliary care services",
     "care support UK",
   ],
   openGraph: {

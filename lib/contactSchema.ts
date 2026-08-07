@@ -4,7 +4,7 @@ import * as z from "zod";
 export const enquiryType = [
   "General_enquiry",
   "Care_at_home",
-  "Supported_living",
+  "domiciliary_care",
   "Urgent_help",
   "Something_else",
 ] as const;

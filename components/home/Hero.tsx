@@ -1,23 +1,17 @@
-"use client";
-
 import Image from "next/image";
-import { Button } from "../ui/button";
 import { bsIllustration } from "@/assets/images";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
 
 const Hero = () => {
-  const router = useRouter();
-
   return (
     <section className="padding-x padding-y md:h-[calc(100vh-80px)]">
       <div className="flex max-md:flex-col h-full justify-between">
         <div className="flex-1 flex flex-col justify-center h-full ">
           <p className="text-xs font-satoshi text-primary tracking-[0.22em] uppercase">
-            - UK Supported Living
+            - UK Domiciliary Care Services
           </p>
           <h1 className="mt-2 md:mt-4 text-3xl md:text-[48px] lg:text-[56px] leading-10 md:leading-tight lg:leading-tight font-semi-bold max-w-[580px]">
-            Supported Living <br className="max-md:hidden" /> For Adults
+            Domiciliary care <br className="max-md:hidden" /> For Adults
             <br className="max-xs:hidden md:hidden" /> With
             <br className="max-md:hidden" /> Special Needs
           </h1>

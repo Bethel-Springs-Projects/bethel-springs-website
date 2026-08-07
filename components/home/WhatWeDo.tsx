@@ -1,7 +1,7 @@
 "use client";
 
 import { nursePatient3 } from "@/assets/images";
-import { HeartHandshake, Home, House, ShieldCheck } from "lucide-react";
+import { Compass, HeartHandshake, Home, House, ShieldCheck } from "lucide-react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
@@ -10,23 +10,24 @@ import "swiper/css/pagination";
 
 const services = [
   {
-    title: "Supported Living Accommodation",
-    description:
-      "Dedicated support care in the individual’s own home, assisting with everyday living tasks and wellbeing",
-    icon: House,
-  },
-  {
-    title: "Personal Care",
-    description:
-      "Respectful, dignified assistance with everyday personal care — quietly, on the person's own terms.",
-    icon: HeartHandshake,
-  },
-  {
     title: "Domiciliary Care",
     description:
       "Flexible, in-home support where trained carers visit at scheduled times to administer care",
     icon: Home,
   },
+  {
+    title: "Independence & Life Skills",
+    description:
+      "Building confidence and the skills needed to live more independently, at a comfortable pace",
+    icon: Compass,
+  },
+  {
+    title: "Personal Care",
+    description:
+      "Respectful, dignified assistance with everyday personal needs — quietly, on the person's own terms.",
+    icon: HeartHandshake,
+  },
+
   {
     title: "Routine & Behavioural Support",
     description:
@@ -42,7 +43,7 @@ const WhatWeDo = () => {
         <p className="sub-title">What We Do</p>
         <h2 className="title">Care that fits around the person</h2>
         <p className="sec-intro">
-          A full range of supported living services delivered with patience,
+          A full range of domiciliary care services delivered with patience,
           respect and consistency.
         </p>
       </div>

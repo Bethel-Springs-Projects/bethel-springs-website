@@ -20,12 +20,12 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.bethelspringsgroup.com/"),
   title: {
-    default: "Bethel Springs | Supported Living & Care Services",
+    default: "Bethel Springs | Domiciliary care Services",
     template: "%s | Bethel Springs",
   },
 
   description:
-    "Professional supported living and care services for adults with autism, learning disabilities, and additional support needs. Providing compassionate, person-centred care across the UK.",
+    "Professional domiciliary care services for adults with autism, learning disabilities, and additional support needs. Providing compassionate, person-centred care across the UK.",
 
   // Link the manifest file
   manifest: "/site.webmanifest",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   },
 
   keywords: [
-    "supported living UK",
+    "domiciliary care UK",
     "domiciliary care London",
     "care services UK",
     "autism support care",
@@ -56,7 +56,9 @@ export const metadata: Metadata = {
     "independent living support",
   ],
 
-  authors: [{ name: "Bethel Springs", url: "https://www.bethelspringsgroup.com/" }],
+  authors: [
+    { name: "Bethel Springs", url: "https://www.bethelspringsgroup.com/" },
+  ],
   creator: "Bethel Springs",
   publisher: "Bethel Springs",
   formatDetection: {
@@ -66,9 +68,9 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Bethel Springs | Supported Living & Care Services",
+    title: "Bethel Springs | Domiciliary care Services",
     description:
-      "Person-centred supported living and care services for adults with additional needs across the UK.",
+      "Person-centred Domiciliary care services for adults with additional needs across the UK.",
     type: "website",
     locale: "en_GB",
     url: "https://www.bethelspringsgroup.com",
@@ -78,16 +80,15 @@ export const metadata: Metadata = {
         url: "https://www.bethelspringsgroup.com/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Supported Living Care Services",
+        alt: "Bethel Springs | Domiciliary care Services",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Bethel Springs | Supported Living & Care Services ",
-    description:
-      "Professional care and supported living services across the UK.",
+    title: "Bethel Springs | Domiciliary care Services ",
+    description: "Professional domiciliary care services across the UK.",
     images: ["/og-image.png"],
     creator: "@bethelsprings",
     site: "@bethelsprings",

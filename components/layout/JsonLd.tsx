@@ -7,10 +7,10 @@ export default function JsonLd() {
     name: "Bethel Springs",
     image: "https://bethelspringsgroup.com/og-image.png",
     description:
-      "Professional supported living and care services for adults with autism and learning disabilities across the UK.",
+      "Professional domiciliary care services for adults with autism and learning disabilities across the UK.",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "76 The Brent",
+      // streetAddress: "76 The Brent",
       addressLocality: "Dartford",
       addressRegion: "Dartford",
       postalCode: "DA1 1YW",
